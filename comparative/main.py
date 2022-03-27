@@ -56,14 +56,30 @@ def shouldBe_erased(character):
     return False
     
 #Print out Main Menu and manage user selection
-def menu():
-    print("Please select a file to analyze")
+def menu_option():
+    print("Avalaible Product Reviews Data: \n")
+    print("1: MP3 Player\n")
+    print("2: DVD Player\n")
+    print("3: Digital Camera\n\n")
+
+    option=input("Please select a product review dataset to analyze: ")
+    print(option)
+
+    switcher = {
+        1: "MP3_Player.txt",
+        2: "DVD_Player.txt",
+        3: "Digital_Camera.txt",
+    }
+
+    return switcher.get(int(option),"nothing")
+
 
 # Driver
 def main():
-    #
+    #Main Menu and receive user input
+    filename=menu_option()
     #Open File to read
-
+    
     input_str = 'I prefer apple to samsung|| I prefer ethereum to bitcoin&& I like google the most** Nokia is the best** Lamborghini is on par with Ferrari.'
     feature_dict = comparative_feature_extraction(input_str)
     for key in feature_dict:
