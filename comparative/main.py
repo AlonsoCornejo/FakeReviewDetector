@@ -1,6 +1,9 @@
 # used to convert the JSON dictionary to a python dictionary object
 from contextlib import nullcontext
 import json
+from operator import truth
+from pickle import FALSE, TRUE
+from string import punctuation
 
 # ComparativeExpressions 
 # for a second sub-team
@@ -34,15 +37,25 @@ def cleaning_data(text):
     clean_text=""
     #Iterate thorough the review text string
     for i in range (0,len(text)):
-        if not text[i]=='.':
+        if not shouldBe_erased(text[i]):
             clean_text+=text[i]
 
     print("New: "+clean_text + '\n')
     return clean_text
 
+#Function to find Punctuation or symbols that should be deleted
+def shouldBe_erased(character):
+    symbols=['.',',',':','/','[',']','{','}','(',')'';','+','-','=','*','#','%','$','@','&','!','?','^','~','`','|','_','<','>']
+
+    #Check if character is in the symbol list
+    for i in symbols:
+        if i==character:
+            return True
+    
+    return False
 # Driver
 def main():
-    input_str = 'I prefer apple to samsung. I prefer ethereum to bitcoin. I like google the most. Nokia is the best. Lamborghini is on par with Ferrari.'
+    input_str = 'I prefer apple to samsung|| I prefer ethereum to bitcoin&& I like google the most** Nokia is the best** Lamborghini is on par with Ferrari.'
     feature_dict = comparative_feature_extraction(input_str)
     for key in feature_dict:
         if feature_dict[key] != 0:
