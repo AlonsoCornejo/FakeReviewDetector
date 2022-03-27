@@ -19,6 +19,7 @@ def comparative_feature_extraction(text):
     with open('comparative_dict.json') as json_file:
         feature_dict = json.load(json_file)
 
+
     #Clean text and remove punctuation 
     clean_text=cleaning_data(text)
 
@@ -49,12 +50,20 @@ def shouldBe_erased(character):
 
     #Check if character is in the symbol list
     for i in symbols:
-        if i==character:
-            return True
+        if i==character: 
+            return True #Symbol to be deleted is found
     
     return False
+    
+#Print out Main Menu and manage user selection
+def menu():
+    print("Please select a file to analyze")
+
 # Driver
 def main():
+    #
+    #Open File to read
+
     input_str = 'I prefer apple to samsung|| I prefer ethereum to bitcoin&& I like google the most** Nokia is the best** Lamborghini is on par with Ferrari.'
     feature_dict = comparative_feature_extraction(input_str)
     for key in feature_dict:
