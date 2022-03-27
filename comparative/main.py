@@ -79,7 +79,8 @@ def main():
     #Main Menu and receive user input
     filename=menu_option()
     #Open File to read
-    
+    file=open(filename,"r")
+  
     input_str = 'I prefer apple to samsung|| I prefer ethereum to bitcoin&& I like google the most** Nokia is the best** Lamborghini is on par with Ferrari.'
     feature_dict = comparative_feature_extraction(input_str)
     for key in feature_dict:
