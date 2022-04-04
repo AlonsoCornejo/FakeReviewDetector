@@ -105,6 +105,9 @@ class DataSet:
         for key in self.feature_dict:
             sum_compwords += self.feature_dict[key]
         
+        #Get Precision
+        precision=num_comp_review/(num_comp_review+(num_reviews-num_comp_review))
+
         #Print Basic Information and findings
         print("\n******************************************************")
         print('\033[1m'+'\033[4m'+"General Summary: \n"+'\033[0m')
@@ -115,8 +118,8 @@ class DataSet:
         print("Number of Reviews containing comparable words: "+ str(num_comp_review))
         print("Average comprable words per Review: "+ str(round(sum_compwords/num_reviews,2)))
         print("Average comprable words per Comparable Review: "+ str(round(sum_compwords/num_comp_review,2)))
-        print("Percentage of Comparable reviews from all reviews: " + str(round((num_comp_review/num_reviews)*100,2)) + "%\n")
-        
+        print("Percentage of Comparable reviews from all reviews: " + str(round((num_comp_review/num_reviews)*100,2)))
+        print("Precision: " + str(round((precision),2)) + "\n")
         #Print the ocurrences
         print('\033[1m'+'\033[4m'+"All Comparable Word Ocurrances: \n"+'\033[0m')
         for key in self.feature_dict:
