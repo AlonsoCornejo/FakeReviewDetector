@@ -1,47 +1,51 @@
 import json
-import string
+import re
 
 class DataSet:
-
-    def __init__(self,name,path):
+    def __init__(self, name, path):
         self.filename = name
         self.mFile=open(path,"r")
 
+        self.feature_dict = {}
+        # https://www.cs.uic.edu/~liub/FBS/comparative-lexicon.pdf
+        with open('comparative_dict.json') as json_file:
+            self.feature_dict = json.load(json_file)
+        json_file.close()
 
-    #Clean Text and Remove Punctuation Function
-    def cleaning_data(self,text,punct_list):
-        #Using the string library
-        for punc in punct_list:
-            if punc in text:
-                text = text.replace(punc, ' ')
-        return text.strip()
+        # precompiles all keys of the dictionary as regex
+        self.feature_dict_compiled = [re.compile(i) for i in self.feature_dict]
+
+        # classification list
+        # 1 - comparative
+        # 0 - NOT comparative
+        self.classification = []
+
+    # Clean input text
+    def cleaning_data(self, text):
+        out = text.lower()
+        out = re.sub(r"(@\[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)|^rt|http.+?", "", out) 
+        out = re.sub(r" +", " ", out)
+        return out
     
     #Execute the couting of the words
     def comparative_feature_extraction(self):
         #Declare and initialzie some storage variables
-        is_comparative_review=False
-        num_comp_review=0
-        num_reviews=0
-        regular_punct = list(string.punctuation)
-        output_file=open("Results.txt", "w")
-        t_imp=open("toImport.txt", "w")
+        is_comparative_review = False
+        num_comp_review = 0
+        num_reviews = 0
+        output_file = open("Results.txt", "w")
+        t_imp = open("toImport.txt", "w")
 
-        """
-            The keys in 'comparative_dict.json' are from 
-            https://www.cs.uic.edu/~liub/FBS/comparative-lexicon.pdf
-        """
-        #Json file to Python Dictionary
-        feature_dict = {}
-        with open('comparative_dict.json') as json_file:
-            feature_dict = json.load(json_file)
-        output_file.write("Dataset Analysed: "+self.filename+"\n")
-        t_imp.write("Review Number,Review,Is_Comparative?,Comparative Word (If Any)\n")#Header for file to import
+        # Write headers for output files
+        output_file.write("Dataset Analysed: " + self.filename + "\n")
+        t_imp.write("Review Number, Review, Is_Comparative?, Comparative Word (If Any)\n")#Header for file to import
+
         #Iterate through lines of the file
         for x in self.mFile:
             #Add Review to the count of all reviews
-            num_reviews+=1
+            num_reviews += 1
             #Clean text and remove punctuation 
-            clean_text=self.cleaning_data(x,regular_punct)
+            clean_text = self.cleaning_data(x)
 
             #Start writing in the files that will contain the obtained data
             output_file.write("Review "+str(num_reviews)+":\n")
@@ -49,7 +53,7 @@ class DataSet:
             # find the number of times that each such key appears in text.
             # loop through all elements in the dictionary.
             # if they are found in the cleaned text, increment the dictionary value.
-            for key in feature_dict:
+            for key in self.feature_dict:
                 
                 if key in clean_text:
                     #Write the word found in the review
@@ -100,15 +104,14 @@ class DataSet:
         #Print Basic Information and findings
         print("\n************************************************************************************")
         print('\033[1m'+'\033[4m'+"General Summary: \n"+'\033[0m')
-        print("Product: "+ product_name + "\n")
-        print("E-Commerce Platform: Amazon \n")
-        print("Data file: "+ filename + "\n")
-        print("Number of Reviews: "+ str(num_reviews) + "\n")
-        print("Number of Comparabale Words: "+ str(sum_compwords) + "\n")
-        print("Number of Reviews containing comparable words: "+ str(num_CompRev) + "\n")
-        print("Average comprable words per Review: "+ str(round(sum_compwords/num_reviews,2)) + "\n")
-        print("Average comprable words per Comparable Review: "+ str(round(sum_compwords/num_CompRev,2)) + "\n")
-        print("Percentage of Comparable reviews from all reviews: " + str(round((num_CompRev/num_reviews)*100,2)) + "%\n")
+        print("Product: "+ product_name)
+        print("Data file: "+ filename)
+        print("Number of Reviews: "+ str(num_reviews))
+        print("Number of Comparabale Words: "+ str(sum_compwords))
+        print("Number of Reviews containing comparable words: "+ str(num_CompRev))
+        print("Average comprable words per Review: "+ str(round(sum_compwords/num_reviews,2)))
+        print("Average comprable words per Comparable Review: "+ str(round(sum_compwords/num_CompRev,2)))
+        print("Percentage of Comparable reviews from all reviews: " + str(round((num_CompRev/num_reviews)*100,2)) + "%")
         
         #Print the ocurrences
         print('\033[1m'+'\033[4m'+"All Comparable Word Ocurrances: \n"+'\033[0m')
@@ -117,6 +120,3 @@ class DataSet:
                 print(key + ' -> ' + str(feature_dict[key]))
         
         print("***********************************************************************************\n")
-
-
-
