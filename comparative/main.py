@@ -41,7 +41,7 @@ def main():
     #Create a dataset Object
     data=dataSet.DataSet(filename,path)
 
-    #Execute Identification of Comparative Words
+    #Execute Identification of Comparative Words and Analysis
     data.get_summary()
        
 if __name__ == "__main__":
