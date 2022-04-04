@@ -1,1 +1,4 @@
 .DS_Store
+comparative/toImport.txt
+comparative/Results.txt
+comparative/__pycache__

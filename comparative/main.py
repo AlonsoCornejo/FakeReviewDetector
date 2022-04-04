@@ -36,7 +36,7 @@ def main():
     filename=menu_option()
 
     #Open File to read
-    path="C:/Users/Alonso Cornejo/Documents/Lehigh University/Third Year/Spring Semester/CSB312/Dic Assignment/comparative-analysis/comparative/Data_Per_Product/"+filename
+    path="./Data_Per_Product/"+filename
 
     #Create a dataset Object
     data=dataSet.DataSet(filename,path)
