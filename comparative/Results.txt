@@ -1,265 +1,355 @@
-Dataset Analysed: DVD_Player.txt
+Dataset Analysed: MP3_Player.txt
 Review 1:
-troubleshooting ad 2500 and ad 2600 no picture scrolling b w
+a quick update to the new zen nx
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 2:
-repost from january 13   2004 with a better fit title
-Contain Comparable Word: better
+this is an edited review   now that i have had time to use the device
+Does NOT Contain Comparable Words
 *****************************************************************
 Review 3:
-does your apex dvd player only play dvd audio without video
+while   there are flaws with the machine   the xtra gets five stars because of its affordability
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 4:
-or does it play audio and video but scrolling in black and white
-Does NOT Contain Comparable Words
+it is the most bang for the buck out there
+Contain Comparable Word: most
 *****************************************************************
 Review 5:
-before you try to return the player or waste hours calling apex tech support   or run the player over with your car   try these simple troubleshooting ideas first
-Does NOT Contain Comparable Words
+yes the ipod is smaller   but not   200 worth   which is the premium you  ll pay for an equivalent capacity model
+Contain Comparable Word: equivalent
 *****************************************************************
 Review 6:
-no picture
-Does NOT Contain Comparable Words
+yes   the ipod looks in tune with the carefully articulated urban hipster persona thats become popular as of late   but sure as hell is n t worth the   200 premium   unless you are just dying to match your music player with that volkswagen beetle and urban outfitters wardrobe
+Contain Comparable Word: match
+Contain Comparable Word: less
 *****************************************************************
 Review 7:
-hopefully you still have the remote control
+for me   i  ll save that cash for another purchase
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 8:
-if you tossed it out the window   you need to fetch it
+get this player
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 9:
-using the remote control   press the i p button located on the bottom right corner of the remote
+before i decided to get this player   i did my research
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 10:
-the i p button switches the tv display between interlace and progressive
+i looked up the ipod   the dell jukebox   and the samsung napster player
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 11:
-if this doesnt bring back the picture   try pressing this button without playing a dvd
-Does NOT Contain Comparable Words
+i chose this one because from what i read   it was the best deal for the money
+Contain Comparable Word: best
 *****************************************************************
 Review 12:
-if you dont get video back   now you can run the player over with your car
+another reason i got it is because you can put wma files on it
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 13:
-picture scrolling in b w
+that takes up half the space of mp3  s
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 14:
-you need the remote control for this so you better get it from your dog before he burries it in the backyard
-Contain Comparable Word: better
+that  s important because i have a lot of music
+Does NOT Contain Comparable Words
 *****************************************************************
 Review 15:
-press the p n button located on the bottom right corner of the remote
+the software is great
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 16:
-the p n button switches your dvd players video output signal between pal and ntsc
+you can sort your music by artist   title   album   or genre   and you can play music based on those categories
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 17:
-by pressing p n   you should be able to get a good picture on the screen
+transfering is easy   the software makes everythig pretty easy
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 18:
-for other problems go to http     www apexdigitalinc com support asp
-Does NOT Contain Comparable Words
+even the battery life is great   it advertises 14 hours   it  s actually a little less but still good
+Contain Comparable Word: less
 *****************************************************************
 Review 19:
-i hope i have helped you continue to enjoy the apex dvd player with these troubleshooting tips
+only 1 problem   no accessories
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 20:
-i have done some research and experimenting with the remote when my apex ad 2500 seemed to have lost its video signal
+yet
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 21:
-im a more happier person after discovering the i p button
-Contain Comparable Word: more
+i hope it  s because it  s new and they are not out yet   but being without a remote is hard
+Does NOT Contain Comparable Words
 *****************************************************************
 Review 22:
-the button was probably accidentally pushed to cause the black screen in the first place
+they player  s interface itself is also very easy to use
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 23:
-but   if you  re looking for my opinion of the apex dvd player   i love it
+can  t complain and i recommend it over all the other players   just hope that remote will come out soon
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 24:
-it practically plays almost everything you give it
-Contain Comparable Word: most
+get it   it  s woth every penny
+Does NOT Contain Comparable Words
 *****************************************************************
 Review 25:
-i  ve had the player for about 2 years now and it still performs nicely with the exception of an occasional wwhhhrrr sound from the motor
+kick a player
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 26:
-for the price it is a well spent investment
+i was a little concerned to be the black sheep buying this player instead of the incredibly overpriced apple i pod
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 27:
-i would recommend buying one
-Does NOT Contain Comparable Words
+i  ve had it for a week now   do n t regret the purchase one bit   and i never leave home without it
+Contain Comparable Word: never
 *****************************************************************
 Review 28:
-incredibe price   performance
+if you have any doubts about this player   well do n t
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 29:
-i  ve owned 6 or 7 dvd players since 1998
+the battery is replaceable   a real plus   and there is a leather case   another real plus
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 30:
-this is by far the nicest one   in so many ways
+i suppose that you could jog with it but it seems to be made for the enjoyment of music
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 31:
-it  s very sleek looking with a very good front panel button layout   and it has a great feature set
+so far the software for the pc works easily
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 32:
-its fast forward and rewind work much more smoothly and consistently than those of other models i  ve had
-Contain Comparable Word: more
-*****************************************************************
-Review 33:
-it plays alternate video formats   vcds   svcds   cvds   very well
+by the way   it looks nice also
 Does NOT Contain Comparable Words
 *****************************************************************
+Review 33:
+an ipod killer
+Contain Comparable Word: kill
+*****************************************************************
 Review 34:
-and amazon com has it for such a great price    how can you go wrong
+this thing kicks mighty apple butt
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 35:
-i  ve bought one for the den and will buy a 2nd one for the bedroom
+i would have given this thing 4 5 stars but since i can  t   i  ll be sweet and give it the full 5 stars
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 36:
-strengths are well listed by other reviewers
+it  s worth it
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 37:
-what got me to buy was the reviewer that said it would play dvd rs fill of files   e    mp3s
+i personally do n t like apple or their business practices   screwing resellers   customers and employees left and right   so i shopped around for something else
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 38:
-it sure does
+after finally stumbling upon this zen nx player   i knew i had found what i was looking for
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 39:
-that  s a rare and valuable feature
+my two main requirements were longer battery life and lower price   i found both
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 40:
-nother nice thing is that the unit has both optical and coax digital audio outputs   though the latter was not mentioned in the literature i  d scanned before buying
+this thing lasted well over 14 hours when i played it straight for the first time
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 41:
-saved me from having to buy an expensive optical cable   as i already had a coax cable
+one thing i should note is that i have only had this product for one day   so there are many options i have not explored
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 42:
-at double speed   2x forward speed     it still plays mp3s with sound    they are pitch corrected and smooth   but twice as fast
+the main problem with the nomad jukebox zen xtra 30 gb is the software
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 43:
-i wish it would do the same for movies   but that  s one rare   cool feature you will have to forgo
-Contain Comparable Word: the same
+on my relatively new computer   p4 with windows xp and usb 2 0     the os complained about the installation of the drivers
+Does NOT Contain Comparable Words
 *****************************************************************
 Review 44:
-weaknesses are minor   the feel and layout of the remote control are only so so   it does n t show the complete filenames of mp3s with really long names   you must cycle through every zoom setting   2x   3x   4x   1 2x   etc     before getting back to normal size   sorry if i  m just ignorant of a way to get back to 1x quickly
+despite the instructions insisting that the process was fairly automatic   i had to install the usb drivers and the nomad interface software manually
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 45:
-if you  re a bargain hunter and you want a great feature set for a rock bottom price   i highly recommend this model
+the interface software itself   which should be user friendly   was anything but easy to use
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 46:
-i bought mine in december of 2003   and have had no real problems with it
+with the nomad explorer software   songs should be drag and drop
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 47:
-it does tend to run quite hot and should be given lots of room for air circulation
+i have not yet tried the cd ripping program
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 48:
-it did also seem to have a strong    new electronics    smell for some time
+the player itself has all sorts of problems
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 49:
-the only thing i did experience was a problem of the player freezing while playing   which i was able to clear by opening it up and blowing it out with    canned air
+the face plate   which pops out for the battery   pops open by itself every 10 minutes or so
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 50:
-i bought this product from amazon
+the player hangs up on file transfer every once in a while   prompting a reset
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 51:
-after using it for just a month   i could not play any dvd
+the scroll button is overly sensitive at times   not sensitive enough at others
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 52:
-i can only hear the sound but no picture
+depressing the scroll button   for selecting   is not always responsive
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 53:
-their customer   www apexdigitalinc com   service is very poor
-Does NOT Contain Comparable Words
+the scroll bar problems make the task of creating playlists more frustrating
+Contain Comparable Word: more
 *****************************************************************
 Review 54:
-no contact phone number   only eamil contact which did not respond me
+on the positive side   the sound of the player is pretty good   once you have everything configured
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 55:
-i got one of these to serve as a second dvd player in my house
+i have n t had time to really push this player to the limit   but audio aspects on the nomad are satisfactory   as should be expected from creative labs
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 56:
-it  s a compact   attractive machine and was easy to set up
+overall   a very disappointing product
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 57:
-basic usage is easy   but the remote has a lot of buttons that i have n t used
+the setup process for the nomad is infuriating   and the interface with the player is sub par
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 58:
-so far   we  ve only used this player a few times to watch movies and it has worked fine
+the player  s mechanics are also flawed
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 59:
-the picture is clear   bright and sharp and the sound is good
+so easy to set up   had some problems with my archos
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 60:
-again   though   it has only been used sparingly
+stayed up all night trying to figure out that thing
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 61:
-the catch is that   while it plays movies just fine   it has refused to read second discs with the movie    extras    on them on the two occaisions when i tried to do that
+just easily drag and drop files into the nomad explorer and from there you easily alter id tags and sort your music according to your liking   by artist   song title   genre   etc
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 62:
-it  s not a big deal for me
+not only is it functional and runs super smooth   fast   but it is also eye candy
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 63:
-i simply watched the extra features on another player
+very sleek   stylish as well as the screen options and visuals it has
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 64:
-had this been my only dvd player   though   it would have been a real problem
+it actually gives the option to clear the previous playlist when i want to play another list
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 65:
-as it is   i  m keeping the machine
+meaning i do n t have to manually clear the list   and then load the new list
 Does NOT Contain Comparable Words
 *****************************************************************
 Review 66:
-it works well enough   so far   for me to be satisfied with it   and it  s possible that i  m missing something
+the cons are n t really a big deal to me
 Does NOT Contain Comparable Words
+*****************************************************************
+Review 67:
+except one con that does annoy me is the way it stores files
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 68:
+no folder structure
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 69:
+and it  s based on the title of the songs
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 70:
+many of my songs where seperated into folders   on the pc
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 71:
+and a few had same titles
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 72:
+so i had to change the titles to make sure that i did n t have any that might be the same as another
+Contain Comparable Word: the same
+Contain Comparable Word: the same as
+*****************************************************************
+Review 73:
+and man
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 74:
+i had to work to put my chinese songs on the player
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 75:
+because i had the actual chinese names of the songs as the title
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 76:
+and since the current language selection was english   even though i think only the menu supports chinese   and not the track info
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 77:
+all it saw were         s and even though the songs had different names in chinese
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 78:
+if it had the same number of         s then it would ask if you want to overwrite another song that just had the same number of         s
+Contain Comparable Word: the same
+*****************************************************************
+Review 79:
+buyer beware   sort your songs and adjust the titles accordingly   maybe this applies to other players too   and not just the nomad   i do n t know
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 80:
+i would  ve still bought this drive even if i knew about this issue beforehand
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 81:
+not counting the time i spent editing the songs   i suppose i should  ve done it anyway on my pc   the transfer was pretty painless
+Contain Comparable Word: less
+*****************************************************************
+Review 82:
+once you start sending files   it  ll continue until it  s done or it hits a song that has the same title as another song
+Contain Comparable Word: the same
+*****************************************************************
+Review 83:
+at which point you can skip   skip all   replace   replace all   or cancel
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 84:
+and go from there
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 85:
+if you chose one of the    all    options   then you do n t need to do anything until it  s done
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 86:
+in two transfer batches   first was english songs   then foreign languages     it did n t come up with any errors   aside the duplicate name i mentioned
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 87:
+so i do n t know what the previous review that could n t do more than 30 songs is talking about
+Contain Comparable Word: more
+*****************************************************************
+Review 88:
+of course   unlike that person i will mention that i upgraded the firmware to 1 23   00
+Contain Comparable Word: unlike
 *****************************************************************

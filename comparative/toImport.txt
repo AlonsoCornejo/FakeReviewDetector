@@ -1,67 +1,91 @@
 Review Number,Review,Is_Comparative?,Comparative Word (If Any)
-1,troubleshooting ad 2500 and ad 2600 no picture scrolling b w,0,None
-2,repost from january 13   2004 with a better fit title,1,better
-3,does your apex dvd player only play dvd audio without video,0,None
-4,or does it play audio and video but scrolling in black and white,0,None
-5,before you try to return the player or waste hours calling apex tech support   or run the player over with your car   try these simple troubleshooting ideas first,0,None
-6,no picture,0,None
-7,hopefully you still have the remote control,0,None
-8,if you tossed it out the window   you need to fetch it,0,None
-9,using the remote control   press the i p button located on the bottom right corner of the remote,0,None
-10,the i p button switches the tv display between interlace and progressive,0,None
-11,if this doesnt bring back the picture   try pressing this button without playing a dvd,0,None
-12,if you dont get video back   now you can run the player over with your car,0,None
-13,picture scrolling in b w,0,None
-14,you need the remote control for this so you better get it from your dog before he burries it in the backyard,1,better
-15,press the p n button located on the bottom right corner of the remote,0,None
-16,the p n button switches your dvd players video output signal between pal and ntsc,0,None
-17,by pressing p n   you should be able to get a good picture on the screen,0,None
-18,for other problems go to http     www apexdigitalinc com support asp,0,None
-19,i hope i have helped you continue to enjoy the apex dvd player with these troubleshooting tips,0,None
-20,i have done some research and experimenting with the remote when my apex ad 2500 seemed to have lost its video signal,0,None
-21,im a more happier person after discovering the i p button,1,more
-22,the button was probably accidentally pushed to cause the black screen in the first place,0,None
-23,but   if you  re looking for my opinion of the apex dvd player   i love it,0,None
-24,it practically plays almost everything you give it,1,most
-25,i  ve had the player for about 2 years now and it still performs nicely with the exception of an occasional wwhhhrrr sound from the motor,0,None
-26,for the price it is a well spent investment,0,None
-27,i would recommend buying one,0,None
-28,incredibe price   performance,0,None
-29,i  ve owned 6 or 7 dvd players since 1998,0,None
-30,this is by far the nicest one   in so many ways,0,None
-31,it  s very sleek looking with a very good front panel button layout   and it has a great feature set,0,None
-32,its fast forward and rewind work much more smoothly and consistently than those of other models i  ve had,1,more
-33,it plays alternate video formats   vcds   svcds   cvds   very well,0,None
-34,and amazon com has it for such a great price    how can you go wrong,0,None
-35,i  ve bought one for the den and will buy a 2nd one for the bedroom,0,None
-36,strengths are well listed by other reviewers,0,None
-37,what got me to buy was the reviewer that said it would play dvd rs fill of files   e    mp3s,0,None
-38,it sure does,0,None
-39,that  s a rare and valuable feature,0,None
-40,nother nice thing is that the unit has both optical and coax digital audio outputs   though the latter was not mentioned in the literature i  d scanned before buying,0,None
-41,saved me from having to buy an expensive optical cable   as i already had a coax cable,0,None
-42,at double speed   2x forward speed     it still plays mp3s with sound    they are pitch corrected and smooth   but twice as fast,0,None
-43,i wish it would do the same for movies   but that  s one rare   cool feature you will have to forgo,1,the same
-44,weaknesses are minor   the feel and layout of the remote control are only so so   it does n t show the complete filenames of mp3s with really long names   you must cycle through every zoom setting   2x   3x   4x   1 2x   etc     before getting back to normal size   sorry if i  m just ignorant of a way to get back to 1x quickly,0,None
-45,if you  re a bargain hunter and you want a great feature set for a rock bottom price   i highly recommend this model,0,None
-46,i bought mine in december of 2003   and have had no real problems with it,0,None
-47,it does tend to run quite hot and should be given lots of room for air circulation,0,None
-48,it did also seem to have a strong    new electronics    smell for some time,0,None
-49,the only thing i did experience was a problem of the player freezing while playing   which i was able to clear by opening it up and blowing it out with    canned air,0,None
-50,i bought this product from amazon,0,None
-51,after using it for just a month   i could not play any dvd,0,None
-52,i can only hear the sound but no picture,0,None
-53,their customer   www apexdigitalinc com   service is very poor,0,None
-54,no contact phone number   only eamil contact which did not respond me,0,None
-55,i got one of these to serve as a second dvd player in my house,0,None
-56,it  s a compact   attractive machine and was easy to set up,0,None
-57,basic usage is easy   but the remote has a lot of buttons that i have n t used,0,None
-58,so far   we  ve only used this player a few times to watch movies and it has worked fine,0,None
-59,the picture is clear   bright and sharp and the sound is good,0,None
-60,again   though   it has only been used sparingly,0,None
-61,the catch is that   while it plays movies just fine   it has refused to read second discs with the movie    extras    on them on the two occaisions when i tried to do that,0,None
-62,it  s not a big deal for me,0,None
-63,i simply watched the extra features on another player,0,None
-64,had this been my only dvd player   though   it would have been a real problem,0,None
-65,as it is   i  m keeping the machine,0,None
-66,it works well enough   so far   for me to be satisfied with it   and it  s possible that i  m missing something,0,None
+1,a quick update to the new zen nx,0,None
+2,this is an edited review   now that i have had time to use the device,0,None
+3,while   there are flaws with the machine   the xtra gets five stars because of its affordability,0,None
+4,it is the most bang for the buck out there,1,most
+5,yes the ipod is smaller   but not   200 worth   which is the premium you  ll pay for an equivalent capacity model,1,equivalent
+6,yes   the ipod looks in tune with the carefully articulated urban hipster persona thats become popular as of late   but sure as hell is n t worth the   200 premium   unless you are just dying to match your music player with that volkswagen beetle and urban outfitters wardrobe,1,match
+6,yes   the ipod looks in tune with the carefully articulated urban hipster persona thats become popular as of late   but sure as hell is n t worth the   200 premium   unless you are just dying to match your music player with that volkswagen beetle and urban outfitters wardrobe,1,less
+7,for me   i  ll save that cash for another purchase,0,None
+8,get this player,0,None
+9,before i decided to get this player   i did my research,0,None
+10,i looked up the ipod   the dell jukebox   and the samsung napster player,0,None
+11,i chose this one because from what i read   it was the best deal for the money,1,best
+12,another reason i got it is because you can put wma files on it,0,None
+13,that takes up half the space of mp3  s,0,None
+14,that  s important because i have a lot of music,0,None
+15,the software is great,0,None
+16,you can sort your music by artist   title   album   or genre   and you can play music based on those categories,0,None
+17,transfering is easy   the software makes everythig pretty easy,0,None
+18,even the battery life is great   it advertises 14 hours   it  s actually a little less but still good,1,less
+19,only 1 problem   no accessories,0,None
+20,yet,0,None
+21,i hope it  s because it  s new and they are not out yet   but being without a remote is hard,0,None
+22,they player  s interface itself is also very easy to use,0,None
+23,can  t complain and i recommend it over all the other players   just hope that remote will come out soon,0,None
+24,get it   it  s woth every penny,0,None
+25,kick a player,0,None
+26,i was a little concerned to be the black sheep buying this player instead of the incredibly overpriced apple i pod,0,None
+27,i  ve had it for a week now   do n t regret the purchase one bit   and i never leave home without it,1,never
+28,if you have any doubts about this player   well do n t,0,None
+29,the battery is replaceable   a real plus   and there is a leather case   another real plus,0,None
+30,i suppose that you could jog with it but it seems to be made for the enjoyment of music,0,None
+31,so far the software for the pc works easily,0,None
+32,by the way   it looks nice also,0,None
+33,an ipod killer,1,kill
+34,this thing kicks mighty apple butt,0,None
+35,i would have given this thing 4 5 stars but since i can  t   i  ll be sweet and give it the full 5 stars,0,None
+36,it  s worth it,0,None
+37,i personally do n t like apple or their business practices   screwing resellers   customers and employees left and right   so i shopped around for something else,0,None
+38,after finally stumbling upon this zen nx player   i knew i had found what i was looking for,0,None
+39,my two main requirements were longer battery life and lower price   i found both,0,None
+40,this thing lasted well over 14 hours when i played it straight for the first time,0,None
+41,one thing i should note is that i have only had this product for one day   so there are many options i have not explored,0,None
+42,the main problem with the nomad jukebox zen xtra 30 gb is the software,0,None
+43,on my relatively new computer   p4 with windows xp and usb 2 0     the os complained about the installation of the drivers,0,None
+44,despite the instructions insisting that the process was fairly automatic   i had to install the usb drivers and the nomad interface software manually,0,None
+45,the interface software itself   which should be user friendly   was anything but easy to use,0,None
+46,with the nomad explorer software   songs should be drag and drop,0,None
+47,i have not yet tried the cd ripping program,0,None
+48,the player itself has all sorts of problems,0,None
+49,the face plate   which pops out for the battery   pops open by itself every 10 minutes or so,0,None
+50,the player hangs up on file transfer every once in a while   prompting a reset,0,None
+51,the scroll button is overly sensitive at times   not sensitive enough at others,0,None
+52,depressing the scroll button   for selecting   is not always responsive,0,None
+53,the scroll bar problems make the task of creating playlists more frustrating,1,more
+54,on the positive side   the sound of the player is pretty good   once you have everything configured,0,None
+55,i have n t had time to really push this player to the limit   but audio aspects on the nomad are satisfactory   as should be expected from creative labs,0,None
+56,overall   a very disappointing product,0,None
+57,the setup process for the nomad is infuriating   and the interface with the player is sub par,0,None
+58,the player  s mechanics are also flawed,0,None
+59,so easy to set up   had some problems with my archos,0,None
+60,stayed up all night trying to figure out that thing,0,None
+61,just easily drag and drop files into the nomad explorer and from there you easily alter id tags and sort your music according to your liking   by artist   song title   genre   etc,0,None
+62,not only is it functional and runs super smooth   fast   but it is also eye candy,0,None
+63,very sleek   stylish as well as the screen options and visuals it has,0,None
+64,it actually gives the option to clear the previous playlist when i want to play another list,0,None
+65,meaning i do n t have to manually clear the list   and then load the new list,0,None
+66,the cons are n t really a big deal to me,0,None
+67,except one con that does annoy me is the way it stores files,0,None
+68,no folder structure,0,None
+69,and it  s based on the title of the songs,0,None
+70,many of my songs where seperated into folders   on the pc,0,None
+71,and a few had same titles,0,None
+72,so i had to change the titles to make sure that i did n t have any that might be the same as another,1,the same
+72,so i had to change the titles to make sure that i did n t have any that might be the same as another,1,the same as
+73,and man,0,None
+74,i had to work to put my chinese songs on the player,0,None
+75,because i had the actual chinese names of the songs as the title,0,None
+76,and since the current language selection was english   even though i think only the menu supports chinese   and not the track info,0,None
+77,all it saw were         s and even though the songs had different names in chinese,0,None
+78,if it had the same number of         s then it would ask if you want to overwrite another song that just had the same number of         s,1,the same
+79,buyer beware   sort your songs and adjust the titles accordingly   maybe this applies to other players too   and not just the nomad   i do n t know,0,None
+80,i would  ve still bought this drive even if i knew about this issue beforehand,0,None
+81,not counting the time i spent editing the songs   i suppose i should  ve done it anyway on my pc   the transfer was pretty painless,1,less
+82,once you start sending files   it  ll continue until it  s done or it hits a song that has the same title as another song,1,the same
+83,at which point you can skip   skip all   replace   replace all   or cancel,0,None
+84,and go from there,0,None
+85,if you chose one of the    all    options   then you do n t need to do anything until it  s done,0,None
+86,in two transfer batches   first was english songs   then foreign languages     it did n t come up with any errors   aside the duplicate name i mentioned,0,None
+87,so i do n t know what the previous review that could n t do more than 30 songs is talking about,1,more
+88,of course   unlike that person i will mention that i upgraded the firmware to 1 23   00,1,unlike
