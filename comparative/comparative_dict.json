@@ -1,5 +1,8 @@
 {
-    "as.+as": 0,
+    "not as.+as": 0,
+    "cannot as.+as": 0,
+    "not.+as.+as": 0,
+    "never.+as.+as": 0,
     "beat": 0,
     "defeat": 0,
     "destroy": 0,
