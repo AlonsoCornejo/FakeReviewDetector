@@ -1,4 +1,5 @@
 import dataSet
+import numpy as np
 # ComparativeExpressions for a second sub-team
 
 #Print out Main Menu and manage user selection
@@ -21,7 +22,6 @@ def menu_option():
     #Return filename based on user input
     return switcher.get(int(option),"nothing")
 
-
 # Driver
 def main():
     #Main Menu and receive user input
@@ -35,6 +35,10 @@ def main():
 
     #Execute Identification of Comparative Words and Analysis
     data.get_summary()
+    # close file after summary calculated
+    data.mFileClose()
+
+    vec = data.getClassificationVector()
        
 if __name__ == "__main__":
     main()

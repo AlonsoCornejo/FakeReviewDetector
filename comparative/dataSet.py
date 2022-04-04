@@ -1,5 +1,6 @@
 import json
 import re
+import numpy as np
 
 class DataSet:
     def __init__(self, name, path):
@@ -19,6 +20,14 @@ class DataSet:
         # 1 - comparative
         # 0 - NOT comparative
         self.classification = []
+
+    # returns the numpy vector containing all line numbers, and their classifications
+    def getClassificationVector(self):
+        list = []
+        for (n, c) in zip(range(len(self.classification)), self.classification):
+            list.append([n, c])
+        vec = np.array(list)
+        return vec
 
     # Clean input text
     def cleaning_data(self, text):
