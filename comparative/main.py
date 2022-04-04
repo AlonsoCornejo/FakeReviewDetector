@@ -37,18 +37,12 @@ def main():
 
     #Open File to read
     path="C:/Users/Alonso Cornejo/Documents/Lehigh University/Third Year/Spring Semester/CSB312/Dic Assignment/comparative-analysis/comparative/Data_Per_Product/"+filename
-    #file=open(path,"r")
 
     #Create a dataset Object
     data=dataSet.DataSet(filename,path)
 
     #Execute Identification of Comparative Words
     data.get_summary()
-    #Identify comparable words in reviews and get data on review file
-    #result = comparative_feature_extraction(file)
-    
-    #Execute/Print Analysis Summary and ocurrences of comparable words
-    #get_summary(filename,result[0],result[1],result[2])
-    
+       
 if __name__ == "__main__":
     main()
