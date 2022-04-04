@@ -1,0 +1,67 @@
+Review Number,Review,Is_Comparative?,Comparative Word (If Any)
+1,troubleshooting ad 2500 and ad 2600 no picture scrolling b w,0,None
+2,repost from january 13   2004 with a better fit title,1,better
+3,does your apex dvd player only play dvd audio without video,0,None
+4,or does it play audio and video but scrolling in black and white,0,None
+5,before you try to return the player or waste hours calling apex tech support   or run the player over with your car   try these simple troubleshooting ideas first,0,None
+6,no picture,0,None
+7,hopefully you still have the remote control,0,None
+8,if you tossed it out the window   you need to fetch it,0,None
+9,using the remote control   press the i p button located on the bottom right corner of the remote,0,None
+10,the i p button switches the tv display between interlace and progressive,0,None
+11,if this doesnt bring back the picture   try pressing this button without playing a dvd,0,None
+12,if you dont get video back   now you can run the player over with your car,0,None
+13,picture scrolling in b w,0,None
+14,you need the remote control for this so you better get it from your dog before he burries it in the backyard,1,better
+15,press the p n button located on the bottom right corner of the remote,0,None
+16,the p n button switches your dvd players video output signal between pal and ntsc,0,None
+17,by pressing p n   you should be able to get a good picture on the screen,0,None
+18,for other problems go to http     www apexdigitalinc com support asp,0,None
+19,i hope i have helped you continue to enjoy the apex dvd player with these troubleshooting tips,0,None
+20,i have done some research and experimenting with the remote when my apex ad 2500 seemed to have lost its video signal,0,None
+21,im a more happier person after discovering the i p button,1,more
+22,the button was probably accidentally pushed to cause the black screen in the first place,0,None
+23,but   if you  re looking for my opinion of the apex dvd player   i love it,0,None
+24,it practically plays almost everything you give it,1,most
+25,i  ve had the player for about 2 years now and it still performs nicely with the exception of an occasional wwhhhrrr sound from the motor,0,None
+26,for the price it is a well spent investment,0,None
+27,i would recommend buying one,0,None
+28,incredibe price   performance,0,None
+29,i  ve owned 6 or 7 dvd players since 1998,0,None
+30,this is by far the nicest one   in so many ways,0,None
+31,it  s very sleek looking with a very good front panel button layout   and it has a great feature set,0,None
+32,its fast forward and rewind work much more smoothly and consistently than those of other models i  ve had,1,more
+33,it plays alternate video formats   vcds   svcds   cvds   very well,0,None
+34,and amazon com has it for such a great price    how can you go wrong,0,None
+35,i  ve bought one for the den and will buy a 2nd one for the bedroom,0,None
+36,strengths are well listed by other reviewers,0,None
+37,what got me to buy was the reviewer that said it would play dvd rs fill of files   e    mp3s,0,None
+38,it sure does,0,None
+39,that  s a rare and valuable feature,0,None
+40,nother nice thing is that the unit has both optical and coax digital audio outputs   though the latter was not mentioned in the literature i  d scanned before buying,0,None
+41,saved me from having to buy an expensive optical cable   as i already had a coax cable,0,None
+42,at double speed   2x forward speed     it still plays mp3s with sound    they are pitch corrected and smooth   but twice as fast,0,None
+43,i wish it would do the same for movies   but that  s one rare   cool feature you will have to forgo,1,the same
+44,weaknesses are minor   the feel and layout of the remote control are only so so   it does n t show the complete filenames of mp3s with really long names   you must cycle through every zoom setting   2x   3x   4x   1 2x   etc     before getting back to normal size   sorry if i  m just ignorant of a way to get back to 1x quickly,0,None
+45,if you  re a bargain hunter and you want a great feature set for a rock bottom price   i highly recommend this model,0,None
+46,i bought mine in december of 2003   and have had no real problems with it,0,None
+47,it does tend to run quite hot and should be given lots of room for air circulation,0,None
+48,it did also seem to have a strong    new electronics    smell for some time,0,None
+49,the only thing i did experience was a problem of the player freezing while playing   which i was able to clear by opening it up and blowing it out with    canned air,0,None
+50,i bought this product from amazon,0,None
+51,after using it for just a month   i could not play any dvd,0,None
+52,i can only hear the sound but no picture,0,None
+53,their customer   www apexdigitalinc com   service is very poor,0,None
+54,no contact phone number   only eamil contact which did not respond me,0,None
+55,i got one of these to serve as a second dvd player in my house,0,None
+56,it  s a compact   attractive machine and was easy to set up,0,None
+57,basic usage is easy   but the remote has a lot of buttons that i have n t used,0,None
+58,so far   we  ve only used this player a few times to watch movies and it has worked fine,0,None
+59,the picture is clear   bright and sharp and the sound is good,0,None
+60,again   though   it has only been used sparingly,0,None
+61,the catch is that   while it plays movies just fine   it has refused to read second discs with the movie    extras    on them on the two occaisions when i tried to do that,0,None
+62,it  s not a big deal for me,0,None
+63,i simply watched the extra features on another player,0,None
+64,had this been my only dvd player   though   it would have been a real problem,0,None
+65,as it is   i  m keeping the machine,0,None
+66,it works well enough   so far   for me to be satisfied with it   and it  s possible that i  m missing something,0,None

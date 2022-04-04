@@ -35,6 +35,8 @@ class DataSet:
         num_comp_review=0
         num_reviews=0
         regular_punct = list(string.punctuation)
+        output_file=open("Results.txt", "w")
+        t_imp=open("toImport.txt", "w")
 
         """
             The keys in 'comparative_dict.json' are from 
@@ -44,30 +46,46 @@ class DataSet:
         feature_dict = {}
         with open('comparative_dict.json') as json_file:
             feature_dict = json.load(json_file)
-        
+        output_file.write("Dataset Analysed: "+self.filename+"\n")
+        t_imp.write("Review Number,Review,Is_Comparative?,Comparative Word (If Any)\n")#Header for file to import
         #Iterate through lines of the file
         for x in self.mFile:
             #Add Review to the count of all reviews
             num_reviews+=1
-
             #Clean text and remove punctuation 
             clean_text=self.cleaning_data(x,regular_punct)
 
+            #Start writing in the files that will contain the obtained data
+            output_file.write("Review "+str(num_reviews)+":\n")
+            output_file.write(clean_text+"\n")
             # find the number of times that each such key appears in text.
             # loop through all elements in the dictionary.
             # if they are found in the cleaned text, increment the dictionary value.
             for key in feature_dict:
+                
                 if key in clean_text:
+                    #Write the word found in the review
+                    output_file.write("Contain Comparable Word: "+key+"\n")
+                    #Write the word found in the review along with other information regarding the review
+                    t_imp.write(str(num_reviews)+","+clean_text+","+str(1)+","+key+"\n")
+                    #Add ocurrence to the recorded list of ocurrences
                     feature_dict[key] += 1
                     is_comparative_review=True
-            
+                    
             #Get Number of comparative reviews
             if is_comparative_review:
                 num_comp_review+=1
-            
+            else:
+                #Write that a comparative word was not found in the review
+                t_imp.write(str(num_reviews)+","+clean_text+","+str(0)+","+"None"+"\n")
+                output_file.write("Does NOT Contain Comparable Words\n")
             #Set false for next review analysis
             is_comparative_review=False
 
+            #Print line delimiting end of review
+            output_file.write("*****************************************************************\n")
+        output_file.close()
+        t_imp.close()
         return feature_dict,num_comp_review,num_reviews
 
     #Print Summary of Search
