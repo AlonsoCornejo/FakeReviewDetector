@@ -1,0 +1,265 @@
+Dataset Analysed: DVD_Player.txt
+Review 1:
+troubleshooting ad 2500 and ad 2600 no picture scrolling b w
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 2:
+repost from january 13   2004 with a better fit title
+Contain Comparable Word: better
+*****************************************************************
+Review 3:
+does your apex dvd player only play dvd audio without video
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 4:
+or does it play audio and video but scrolling in black and white
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 5:
+before you try to return the player or waste hours calling apex tech support   or run the player over with your car   try these simple troubleshooting ideas first
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 6:
+no picture
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 7:
+hopefully you still have the remote control
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 8:
+if you tossed it out the window   you need to fetch it
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 9:
+using the remote control   press the i p button located on the bottom right corner of the remote
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 10:
+the i p button switches the tv display between interlace and progressive
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 11:
+if this doesnt bring back the picture   try pressing this button without playing a dvd
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 12:
+if you dont get video back   now you can run the player over with your car
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 13:
+picture scrolling in b w
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 14:
+you need the remote control for this so you better get it from your dog before he burries it in the backyard
+Contain Comparable Word: better
+*****************************************************************
+Review 15:
+press the p n button located on the bottom right corner of the remote
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 16:
+the p n button switches your dvd players video output signal between pal and ntsc
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 17:
+by pressing p n   you should be able to get a good picture on the screen
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 18:
+for other problems go to http     www apexdigitalinc com support asp
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 19:
+i hope i have helped you continue to enjoy the apex dvd player with these troubleshooting tips
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 20:
+i have done some research and experimenting with the remote when my apex ad 2500 seemed to have lost its video signal
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 21:
+im a more happier person after discovering the i p button
+Contain Comparable Word: more
+*****************************************************************
+Review 22:
+the button was probably accidentally pushed to cause the black screen in the first place
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 23:
+but   if you  re looking for my opinion of the apex dvd player   i love it
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 24:
+it practically plays almost everything you give it
+Contain Comparable Word: most
+*****************************************************************
+Review 25:
+i  ve had the player for about 2 years now and it still performs nicely with the exception of an occasional wwhhhrrr sound from the motor
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 26:
+for the price it is a well spent investment
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 27:
+i would recommend buying one
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 28:
+incredibe price   performance
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 29:
+i  ve owned 6 or 7 dvd players since 1998
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 30:
+this is by far the nicest one   in so many ways
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 31:
+it  s very sleek looking with a very good front panel button layout   and it has a great feature set
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 32:
+its fast forward and rewind work much more smoothly and consistently than those of other models i  ve had
+Contain Comparable Word: more
+*****************************************************************
+Review 33:
+it plays alternate video formats   vcds   svcds   cvds   very well
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 34:
+and amazon com has it for such a great price    how can you go wrong
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 35:
+i  ve bought one for the den and will buy a 2nd one for the bedroom
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 36:
+strengths are well listed by other reviewers
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 37:
+what got me to buy was the reviewer that said it would play dvd rs fill of files   e    mp3s
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 38:
+it sure does
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 39:
+that  s a rare and valuable feature
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 40:
+nother nice thing is that the unit has both optical and coax digital audio outputs   though the latter was not mentioned in the literature i  d scanned before buying
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 41:
+saved me from having to buy an expensive optical cable   as i already had a coax cable
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 42:
+at double speed   2x forward speed     it still plays mp3s with sound    they are pitch corrected and smooth   but twice as fast
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 43:
+i wish it would do the same for movies   but that  s one rare   cool feature you will have to forgo
+Contain Comparable Word: the same
+*****************************************************************
+Review 44:
+weaknesses are minor   the feel and layout of the remote control are only so so   it does n t show the complete filenames of mp3s with really long names   you must cycle through every zoom setting   2x   3x   4x   1 2x   etc     before getting back to normal size   sorry if i  m just ignorant of a way to get back to 1x quickly
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 45:
+if you  re a bargain hunter and you want a great feature set for a rock bottom price   i highly recommend this model
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 46:
+i bought mine in december of 2003   and have had no real problems with it
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 47:
+it does tend to run quite hot and should be given lots of room for air circulation
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 48:
+it did also seem to have a strong    new electronics    smell for some time
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 49:
+the only thing i did experience was a problem of the player freezing while playing   which i was able to clear by opening it up and blowing it out with    canned air
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 50:
+i bought this product from amazon
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 51:
+after using it for just a month   i could not play any dvd
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 52:
+i can only hear the sound but no picture
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 53:
+their customer   www apexdigitalinc com   service is very poor
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 54:
+no contact phone number   only eamil contact which did not respond me
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 55:
+i got one of these to serve as a second dvd player in my house
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 56:
+it  s a compact   attractive machine and was easy to set up
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 57:
+basic usage is easy   but the remote has a lot of buttons that i have n t used
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 58:
+so far   we  ve only used this player a few times to watch movies and it has worked fine
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 59:
+the picture is clear   bright and sharp and the sound is good
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 60:
+again   though   it has only been used sparingly
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 61:
+the catch is that   while it plays movies just fine   it has refused to read second discs with the movie    extras    on them on the two occaisions when i tried to do that
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 62:
+it  s not a big deal for me
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 63:
+i simply watched the extra features on another player
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 64:
+had this been my only dvd player   though   it would have been a real problem
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 65:
+as it is   i  m keeping the machine
+Does NOT Contain Comparable Words
+*****************************************************************
+Review 66:
+it works well enough   so far   for me to be satisfied with it   and it  s possible that i  m missing something
+Does NOT Contain Comparable Words
+*****************************************************************
