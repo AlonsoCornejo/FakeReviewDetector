@@ -9,6 +9,9 @@ def menu_option():
     print("2: DVD Player")
     print("3: Digital Camera")
     print("4: MP3 Player")
+    print("5: Coke vs Pepsi")
+    print("6: Camera models comaparison")
+    print("7: Soccer vs Football")
 
     option=input("Please select a product review dataset to analyze: ")
 
@@ -17,6 +20,9 @@ def menu_option():
         2: "DVD_Player.txt",
         3: "Digital_Camera.txt",
         4: "MP3_Player.txt",
+        5: "Coke_Pepsi.txt",
+        6: "Camera_comp.txt",
+        7: "Soccer_Football.txt",
     }
 
     #Return filename based on user input
