@@ -9,6 +9,7 @@ class DataSet:
 
         self.feature_dict = {}
         # https://www.cs.uic.edu/~liub/FBS/comparative-lexicon.pdf
+        # https://www.w3schools.blog/comparative-superlative-adjectives
         with open('comparative_dict.json') as json_file:
             self.feature_dict = json.load(json_file)
         json_file.close()
