@@ -20,7 +20,7 @@ def main():
     from nltk import StanfordTagger
     
     
-    text_tok = nltk.word_tokenize("Shoes are the best and greatest.")
+    text_tok = nltk.word_tokenize("no picture")
  
     # Print(text_tok)
     pos_tagged = nltk.pos_tag(text_tok)
@@ -28,7 +28,6 @@ def main():
     # Print the list of tuples: (word,word_class)
     print(pos_tagged)
     
-    #
     #For loop to check if there is a word class proper of comparative words
     for word,word_class in pos_tagged:
         if(find_comparativeTypes(word_class)):

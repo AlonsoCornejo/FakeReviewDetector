@@ -1,6 +1,9 @@
 import json
 import re
 import numpy as np
+import nltk
+from nltk import word_tokenize
+from nltk import StanfordTagger
 
 class DataSet:
     def __init__(self, name, path):
@@ -39,22 +42,42 @@ class DataSet:
         out = re.sub(r" +", " ", out)
         return out
     
+    #Function to check if the review contains word_class proper of comparative sentences (Based on Stanford)
+    def find_comparativeTypes(self, word_class):
+        #Comparative words word_classes
+        comp_words=["JJR","JJS","RBR","RBS"]
+        
+        #Iterate
+        for x in comp_words:
+            if x==word_class:
+                return 1
+        
+        return 0
+
     #Execute the couting of the words
     def comparative_feature_extraction(self):
         #Declare and initialzie some storage variables
         num_comp_review = 0
         num_reviews = 0
+        stanford_comp = 0
+        stanford_word= "None"
+
+        #Open files for writing
         output_file = open("Results.txt", "w")
         t_imp = open("toImport.txt", "w")
+        comp = open("comp.txt", "w")
 
         # Write headers for output files
         output_file.write("Dataset Analysed: " + self.filename + "\n")
-        t_imp.write("Review Number, Review, Is_Comparative?, Comparative Word (If Any)\n")#Header for file to import
+        t_imp.write("Review Number, Review, Is_Comparative?, Comparative Word (If Any),Is_Comparative? (Stanford Algorithm),Comparative Word (If Any)\n")
+        comp.write("Review Number, Review, Is_Comparative? (Our Algorithm), Is_Comparative? (Stanford Algorithm)\n")
 
         #Iterate through lines of the file
         for x in self.mFile:
             # 0 for false, 1 for true
             is_comparative_review = 0
+            stanford_comp = 0
+            stanford_word= "None"
 
             # Incremement num_reviews each time a new review is acessed
             num_reviews += 1
@@ -65,6 +88,18 @@ class DataSet:
             #Start writing in the files that will contain the obtained data
             output_file.write("Review " + str(num_reviews) + ":\n")
             output_file.write(clean_text + "\n")
+
+            #Do Stanford Algorithm Analysis
+            text_tok = nltk.word_tokenize(clean_text)
+            pos_tagged = nltk.pos_tag(text_tok)
+            
+            #For loop to check if there is a word class proper of comparative words
+            for word,word_class in pos_tagged:
+                if(self.find_comparativeTypes(word_class)):
+                    stanford_comp=1
+                    stanford_word=word
+                    break
+                    
 
             # Find the number of times that each such key appears in text.
             # Loop through all elements in the dictionary.
@@ -82,16 +117,18 @@ class DataSet:
                     # Write detected comparable word to the output file
                     output_file.write("Contains Comparable Word: "+key+"\n")
                     # Write the word found in the review along with other information regarding the review
-                    t_imp.write(str(num_reviews)+","+clean_text+","+str(1)+","+key+"\n")
-
+                    t_imp.write(str(num_reviews)+","+clean_text+","+str(1)+","+key+str(stanford_comp)+","+stanford_word+"\n")
+                    
             self.classification.append(is_comparative_review)
                     
             #Get Number of comparative reviews
             if is_comparative_review:
                 num_comp_review += 1
+                comp.write(str(num_reviews)+","+clean_text+","+str(1)+","+str(stanford_comp)+ "\n")
             else:
                 #Write that a comparative word was not found in the review
                 t_imp.write(str(num_reviews) + "," + clean_text + "," + str(0) + "," + "None" + "\n")
+                comp.write(str(num_reviews)+","+clean_text+","+str(0)+","+str(stanford_comp)+ "\n")
                 output_file.write("Does NOT Contain Comparable Words\n")
             #Set false for next review analysis
             is_comparative_review=False
@@ -102,6 +139,7 @@ class DataSet:
         #Close Files
         output_file.close()
         t_imp.close()
+        comp.close()
 
         #Return number of comparative reviews and total reviews processed
         return num_comp_review, num_reviews
@@ -149,7 +187,7 @@ class DataSet:
         
         print("******************************************************\n")
     
-    # closes the dataset file
+    #Closes the dataset file
     def mFileClose(self):
         if not self.mFile.closed:
             self.mFile.close()
