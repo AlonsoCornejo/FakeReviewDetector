@@ -10,7 +10,7 @@ This project is intended to be a practice of NLP techniques looking forward to m
 
 ## Main Directory
 
-* **Data_Per_Product:** Folder including partially cleaned data files on product reviews
+* **Data_Per_Product:** Folder including partially cleaned data files on product reviews.
 * **dataSet.py:** Class that contains code for product review processing. Used as base for the object dataset which represents a the information from data file containing product reviews.
 * **main.py:** Main class used to create the dataset object and execute the product review analysis based on the data file selected.
 * **Results.txt and toImport.txt:** Contain the results from the review processing. Review.txt is for the user reading and toImport.txt ready to be imported as a CSV file.
