@@ -4,6 +4,8 @@ import numpy as np
 
 class DataSet:
     def __init__(self, name, path):
+
+        #Open File
         self.filename = name
         self.mFile=open(path,"r")
 
@@ -14,15 +16,15 @@ class DataSet:
             self.feature_dict = json.load(json_file)
         json_file.close()
 
-        # precompiles all keys of the dictionary as regex
+        # Precompiles all keys of the dictionary as regex
         self.feature_dict_compiled = [re.compile(i) for i in self.feature_dict]
 
-        # classification list
+        # Classification List
         # 1 - comparative
         # 0 - NOT comparative
         self.classification = []
 
-    # returns the numpy vector containing all line numbers, and their classifications
+    # Returns the numpy vector containing all line numbers, and their classifications
     def getClassificationVector(self):
         list = []
         for (n, c) in zip(range(len(self.classification)), self.classification):
@@ -54,7 +56,7 @@ class DataSet:
             # 0 for false, 1 for true
             is_comparative_review = 0
 
-            # incremement num_reviews each time a new review is acessed
+            # Incremement num_reviews each time a new review is acessed
             num_reviews += 1
 
             # Clean text and remove punctuation 
@@ -63,18 +65,23 @@ class DataSet:
             #Start writing in the files that will contain the obtained data
             output_file.write("Review " + str(num_reviews) + ":\n")
             output_file.write(clean_text + "\n")
-            # find the number of times that each such key appears in text.
-            # loop through all elements in the dictionary.
-            # if they are found in the cleaned text, increment the dictionary value.
+
+            # Find the number of times that each such key appears in text.
+            # Loop through all elements in the dictionary.
+            # If they are found in the cleaned text, increment the dictionary value.
             for (regex, key) in zip(self.feature_dict_compiled, self.feature_dict):
+                #Account the number of comparative word occurrence 
                 num_matches = len(re.findall(regex, clean_text))
                 self.feature_dict[key] += num_matches
+
+                #Check if is comparative review 
                 if num_matches != 0:
+                    #Add one more comparative review to the count
                     is_comparative_review = 1
 
-                    # write detected comparable word to the output file
+                    # Write detected comparable word to the output file
                     output_file.write("Contains Comparable Word: "+key+"\n")
-                    # write the word found in the review along with other information regarding the review
+                    # Write the word found in the review along with other information regarding the review
                     t_imp.write(str(num_reviews)+","+clean_text+","+str(1)+","+key+"\n")
 
             self.classification.append(is_comparative_review)
@@ -91,8 +98,12 @@ class DataSet:
 
             #Print line delimiting end of review
             output_file.write("**********************************************\n")
+
+        #Close Files
         output_file.close()
         t_imp.close()
+
+        #Return number of comparative reviews and total reviews processed
         return num_comp_review, num_reviews
 
     #Print Summary of Search

@@ -41,9 +41,11 @@ def main():
 
     #Execute Identification of Comparative Words and Analysis
     data.get_summary()
-    # close file after summary calculated
+
+    #Close file after summary calculated
     data.mFileClose()
 
+    #Get Classification Vector
     vec = data.getClassificationVector()
        
 if __name__ == "__main__":
