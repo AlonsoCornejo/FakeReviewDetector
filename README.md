@@ -4,8 +4,8 @@ This project is intended to be a practice of NLP techniques looking forward to m
 
 ## Directory Distribution
 
-* **Imported Data**: Raw Data on E-Commerce Product Reviews extracted from the Human in the Loop project repository and other internet sources.
-* **Main**: Includes Python scripts for clean review data processing and analysis. More information in the section below.
+* **Imported Data:**: Raw Data on E-Commerce Product Reviews extracted from the Human in the Loop project repository and other internet sources.
+* **Main:** Includes Python scripts for clean review data processing and analysis. More information in the section below.
 * **Miscellaneous:** Files used as practice for implementations in the Main. Others.
 
 ## Main Directory
@@ -17,7 +17,7 @@ This project is intended to be a practice of NLP techniques looking forward to m
 
 ## Current Status
 
-To run our current processing and analysis of the product review data please go to the Main folder and type the following command:
+To run our current processing and analysis of the product reviews data please go to the Main folder and type the following command:
 
 ```bash
 python main.py
