@@ -94,7 +94,7 @@ Does NOT Contain Comparable Words
 **********************************************
 Review 24:
 it practically plays almost everything you give it 
-Contains Comparable Word: most
+Does NOT Contain Comparable Words
 **********************************************
 Review 25:
 i ve had the player for about 2 years now and it still performs nicely with the exception of an occasional wwhhhrrr sound from the motor 

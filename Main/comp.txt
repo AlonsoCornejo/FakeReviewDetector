@@ -22,7 +22,7 @@ Review Number, Review, Is_Comparative? (Our Algorithm), Is_Comparative? (Stanfor
 21,im a more happier person after discovering the ip button ,1,1
 22,the button was probably accidentally pushed to cause the black screen in the first place ,0,0
 23,but if you re looking for my opinion of the apex dvd player i love it ,0,0
-24,it practically plays almost everything you give it ,1,0
+24,it practically plays almost everything you give it ,0,0
 25,i ve had the player for about 2 years now and it still performs nicely with the exception of an occasional wwhhhrrr sound from the motor ,0,0
 26,for the price it is a well spent investment ,0,0
 27,i would recommend buying one ,0,0
