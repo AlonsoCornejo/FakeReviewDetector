@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% from "macro.html" import render_field %}
+
+{% block content %}
+
+<!-- <style type="text/css">
+  label.col-lg-3.control-label {
+    text-align: left;
+  }
+</style> -->
+
+<br>
+
+<!-- <legend>Please read the terms of the <a href="/consent", target="_blank">Consent Form</a> carefully.</legend>
+<p>
+ By checking I Agree below and creating an accout, you confirm that you have read the above information, you have asked any questions you may have had and have received answers, and you consent to participate in the study.
+</p> -->
+
+<br>
+
+<legend>Create an Account</legend>
+<p>
+Please create an account for use in this study. 
+</p>
+
+<hr>
+
+<div class="row">
+
+    <div class="well bs-component">
+      <form method="POST" action="." class="form-horizontal">
+        {{ form.csrf_token }}
+        <fieldset>
+
+          <div class="col-md-7">
+            {{ render_field(form.email, class="form-control", id="inputEmail", placeholder="Your email address") }}
+            {{ render_field(form.password, class="form-control", id="inputPassword", placeholder="Minimum of 6 characters") }}
+            {{ render_field(form.confirm, class="form-control", id="confirmPassword", placeholder="Confirm Password")}}
+          </div>
+
+          <div class="col-md-5">
+
+            <div class="radio">
+              <label class="checkbox">
+                <input type="checkbox" id="termschk" name="consent" onclick="validate()">
+                I agree to the terms and conditions stated below. <!--Need to create terms and conditions-->
+								<br>
+                <a href="{{ url_for('termsAndConditions')}}" target="_blank">View Terms and Conditions</a>
+              </label>
+            </div>
+
+            <div style="margin-top:30px;">
+              <button type="submit" id="sign_in" disabled="disabled" class="btn btn-block btn-primary btn-lg">Create Account</button>
+            </div>
+
+          </div>
+
+        </fieldset>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+  function validate() {
+    var chk = document.getElementById('termschk');
+    if(chk.checked)
+      document.getElementById('sign_in').disabled = false;
+    else
+      document.getElementById('sign_in').disabled = true;
+  }
+</script>
+
+{% endblock %}

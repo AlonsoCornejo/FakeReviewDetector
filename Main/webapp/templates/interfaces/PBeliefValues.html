@@ -1,0 +1,60 @@
+<!--created research page to be used for research once finished-->
+{% extends "base.html" %}
+{% from "macro.html" import render_field %}
+
+{% block content%}
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="page-header">
+      <h2>Play Around With SpEagle</h2>
+    </div>
+		<div class="sub-header">
+      <h5><br>This page showcases all of the users who have left a reviw for the inputted product ID. 
+				If you would like to learn more about what goes into the classification of a specific review, select 'Explore' next to a user ID. Feel free to sort either by percentile or by user ID, you can also choose a new product ID to examine.
+			</h5>
+    </div>
+		</div>
+			<p style="padding-top: 20px">
+			<a class="btn btn-primary btn-block" style="margin-right:30px;" href="{{ url_for('run_speagle_high', **request.view_args) }}" role="button">Sort Highest</a>
+			<a class="btn btn-primary btn-block" style="margin-right:30px;" href="{{ url_for('run_speagle_low',  **request.view_args) }}" role="button">Sort Lowest</a>
+			<a class="btn btn-primary btn-block" style="margin-right:30px;" href="{{ url_for('run_speagle', **request.view_args) }}" role="button">Sort User ID</a>
+			<a class="btn btn-primary btn-block" style="margin-right:30px;" href="{{ url_for('sandbox')}}" role="button">Enter New Product ID</a>
+			</p> 
+		</div> 
+    <div class="col-lg-10">
+			<div class="panel panel-default">
+        <div class="panel-body">
+          <form method="POST" action=".">
+            <fieldset>
+						</p>
+						</div>
+						<h4>SpEagle Output for Reviews on Product {{pData}}</h4>
+						<p></p>
+							{% if processed_text %}
+								{% for para in processed_text %}
+									<p><a href="{{ url_for('dive_in', pData=pData, uData=keys[loop.index0]) }}"><b>Explore</b></a>&emsp;{{para}}</p>
+								{% endfor %}
+							{% endif %}
+						</div>
+            </fieldset>
+          </form>
+      </div>
+    
+		
+   <form method="POST" action="." class="form form-horizontal">
+      <legend></legend>
+      </ul>
+      <div class="control-group">
+        <label class="control-label"></label>
+          <div class="controls">
+            <p style="padding-bottom: 20px"> 
+						<a class="btn btn-primary btn-block" href="{{ url_for('index')}}" role="button">Return Home</a>
+					</p>
+          </div>
+      </div>
+    </form> 
+  </div>
+</div>
+
+{% endblock %}

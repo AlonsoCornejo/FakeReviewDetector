@@ -1,0 +1,298 @@
+{% from "macro.html" import render_field %}
+<!--testing user after they've learned, need to better implement this-->
+{% extends "base.html" %}
+
+{% block content%}
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
+<body>
+  <div class="container">
+<div class="row">
+    <div class="col-lg-12">
+
+      <div class="page-header">
+        <h2>Learn About the Features of our AI model: SpEagle</h2>
+      </div>
+      <br><br>
+      <div class="col-lg-10">
+        <img src="{{ url_for('static', filename='img/YelpUser.jpeg') }}" width="300" class="rounded float-left" alt="Yelp User">
+        <img src="{{ url_for('static', filename='img/YelpReview.png') }}" width="500" class="rounded float-right" alt="Yelp Review">
+      </div><br><br>
+      <div class="col-lg-10">
+        <p>SpEagle thinks this review is a genuine one, and this conclusion is based on the various features detected from the user and review aspect.</p>
+          <br>
+      </div>
+      
+      <div class="col-lg-12">
+        <table class="table table-hover">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col">#</th>
+              <th scope="col">Review Features</th>
+              <th scope="col">Values</th>
+              <th scope="col">Weight</th>
+              <th scope="col">Values * Weight</th>
+              <th scope="col">Contribution</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td><a href="#" style="color:grey;" class="red-tooltip" data-toggle="tooltip" title="A high rank means higher probability towards genuine review, a low rank means higher probability towards spam review">Rank of the review</a></td>
+              <td>1</td>
+              <td>0.5</td>
+              <td>0.5</td>
+              <td>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped" style="width:15%">15%</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td><a href="#" style="color:grey;" data-toggle="tooltip" title="Extreme ratings (4-5 stars) indicates possible spam.
+                ">Extremity of the rating</a></td>
+              <td>3.5</td>
+              <td>0.1</td>
+              <td>0.35</td>
+              <td>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped" style="width:15%">15%</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td><a href="#" style="color:grey;" data-toggle="tooltip" title="Reviews submitted very early on in a product’s lifetime are more likely to be spam.">Written early?</a></td>
+              <td>-1</td>
+              <td>5</td>
+              <td>-5</td>
+              <td>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped" style="width:5%">5%</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td><a href="#" style="color:grey;" data-toggle="tooltip" title="If given review is from user with only one review, it is more likely to be spam.">User’s only rating?</a></td>
+              <td>101</td>
+              <td>70</td>
+              <td>7070</td>
+              <td>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped" style="width:60%">60%</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td><a href="#" style="color:grey;" data-toggle="tooltip" title="Large deviation between given review and other reviews of this product indicates possible spam.">Rating deviation from average</a></td>
+              <td>1</td>
+              <td>100</td>
+              <td>100</td>
+              <td>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped" style="width:25%">25%</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+      </table><br><br>
+     <!-- <div class="col-lg-12">
+        <div class="col-lg-10">
+          <h2>Feature 1: Rank of the Review</h2>
+          <canvas id="horizontalBar1" height=100></canvas><br><br>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="col-lg-10">
+          <h2>Feature 2: Extremity of the Rating</h2>
+          <canvas id="horizontalBar2" height=100></canvas><br><br>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="col-lg-10">
+          <h2>Feature 3: Early Review</h2>
+          <canvas id="horizontalBar3" height=100></canvas><br><br>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="col-lg-10">
+          <h2>Feature 4: User’s only rating</h2>
+          <canvas id="horizontalBar4" height=100></canvas><br><br>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="col-lg-10">
+          <h2>Feature 5: Rating deviation from average</h2>
+          <canvas id="horizontalBar5" height=100></canvas><br><br>
+        </div>
+      </div>-->
+ <!-- <div class="myslider">
+        <span class="font-weight-bold indigo-text mr-2 mt-1">0</span>
+        <span class="font-weight-bold indigo-text mr-12">100</span>
+        <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" disabled>
+      </div> -->
+
+      <!-- <div class="d-flex justify-content-center my-4">
+        <span class="font-weight-bold indigo-text mr-2 mt-1">0</span>
+        <form class="range-field w-25">
+          <input class="border-0" type="range" min="0" max="100" />
+        </form>
+        <span class="font-weight-bold indigo-text ml-2 mt-1">100</span>
+      </div> -->
+      <table class="table table-hover">
+        <thead>
+          <tr class="table-info">
+            <th scope="col">#</th>
+            <th scope="col">Product Features</th>
+            <th scope="col">Values</th>
+            <th scope="col">Weight</th>
+            <th scope="col">Values * Weight</th>
+            <th scope="col">Contribution</th>
+            <!--not sure we have visualizations, if we do add back-->
+          <!-- <th scope="col">Visualization</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td><a href="#" style="color:grey;" data-toggle="tooltip" title="High number of reviews in a day indicates possible spammer.">Most reviews in a single day</a></td>
+            <td>10</td>
+            <td>2</td>
+            <td>20</td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-info" style="width:30%">30%</div>
+              </div>
+            </td>
+          <!-- <td><canvas id="myChart" height=100></canvas></td> -->
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td><a href="#" style="color:grey;" data-toggle="tooltip" title="Highly skewed ratio of 4-5 star reviews indicates possible spammer.">Ratio of positive reviews (4-5 star)</a></td>
+            <td>3</td>
+            <td>6</td>
+            <td>18</td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-info" style="width:17%">17%</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td><a href="#" style="color:grey;" data-toggle="tooltip" title="Highly skewed ratio of 1-2 star reviews also indicates possible spammer.">Ratio of negative reviews (1-2 star)</a></td>
+            <td>15</td>
+            <td>2.5</td>
+            <td>37.5</td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-info" style="width:25%">25%</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td><a href="#" style="color:grey;" data-toggle="tooltip" title="Large deviation between given review and other reviews from user indicates possible spammer.">Standard rating deviation of reviews written</a></td>
+            <td>15</td>
+            <td>2.5</td>
+            <td>37.5</td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-info" style="width:25%">25%</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td><a href="#" style="color:grey;" data-toggle="tooltip" title="Users active over large amounts of time are less likely to be spammers.">Long time between first and last reviews?</a></td>
+            <td>50</td>
+            <td>5</td>
+            <td>250</td>
+            <td>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-info" style="width:40%">40%</div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+    </table><br>
+    <p>Mouse over each feature to better understand the impact on likeliness to be spam.  The next page will ask you to 
+      judge which reviews are spam based on tables similar to the ones above.
+    </p><br>
+      <form method="POST" action="." class="form form-horizontal">
+        {{ form.csrf_token }}
+
+        <legend></legend>
+        <ul>
+          {{ render_field(form.confident) }}
+        </ul>
+
+        <div class="control-group">
+          <label class="control-label"></label>
+            <div class="controls">
+              <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</div>
+</div>
+</body>
+    </div>
+  </div>
+
+{% endblock %}
+{% block extra_js %}
+<script>
+  var userFeature = [[0.995024875621890, 0.08955223880597019, 0.9950248756218906, 0.9950248756218906, 0.004975124378109453, 0.004975124378109453],[0.9950248756218906, 0.08955223880597019, 0.9950248756218906, 0.9502487562189055, 0.04975124378109453, 0.004975124378109453], [0.9950248756218906, 0.08955223880597019, 0.9950248756218906, 0.9203980099502488, 0.07960199004975124, 0.004975124378109453], [0.9950248756218906, 0.9651741293532339, 0.05472636815920395, 0.12935323383084574, 0.8805970149253731, 0.18407960199004975], [0.736318407960199, 0.8109452736318408, 0.22388059701492535, 0.32835820895522383, 0.7064676616915423, 0.9104477611940298], [0.5024875621890548, 0.23383084577114432, 0.791044776119403, 0.8656716417910448, 0.2835820895522388, 0.9552238805970149], [0.5024875621890548, 0.7810945273631841, 0.19402985074626866, 0.1691542288557214, 0.9253731343283582, 0.7810945273631841], [0.9950248756218906, 0.10447761194029848, 0.8258706467661692, 0.7711442786069651, 0.14925373134328357, 0.22885572139303484], [0.5024875621890548, 0.2736318407960199, 0.7711442786069651, 0.8009950248756219, 0.32338308457711445, 0.8009950248756219], [0.736318407960199, 0.7512437810945274, 0.5522388059701493, 0.6218905472636815, 0.582089552238806, 0.3482587064676617], [0.9950248756218906, 0.6119402985074627, 0.4328358208955224, 0.28358208955223885, 0.6666666666666666, 0.1890547263681592], [0.353238308457711, 0.2786069651741293, 0.5970149253731343, 0.5422885572139303, 0.39800995024875624, 0.9850746268656716],[0.3532338308457711, 0.5323383084577115, 0.5024875621890548, 0.5472636815920398, 0.6069651741293532, 0.8059701492537313], [0.3532338308457711, 0.154228855721393, 0.7014925373134329, 0.5323383084577115, 0.24378109452736318, 0.9502487562189055], [0.3532338308457711, 0.1840796019900498, 0.8109452736318408, 0.7960199004975125, 0.263681592039801, 0.44776119402985076],[0.3532338308457711, 0.42288557213930345, 0.43781094527363185, 0.2885572139303483, 0.4079601990049751, 0.945273631840796], [0.3532338308457711, 0.5621890547263682, 0.48756218905472637, 0.5373134328358209, 0.6169154228855721, 0.47761194029850745], [0.12437810945273631, 0.592039800995025, 0.4029850746268657, 0.3084577114427861, 0.736318407960199, 0.5671641791044776], [0.06467661691542292, 0.4577114427860697, 0.5174129353233831, 0.6567164179104478, 0.5472636815920398, 0.3333333333333333], [0.736318407960199, 0.29850746268656714, 0.263681592039801, 0.39303482587064675, 0.31343283582089554, 0.3383084577114428]];
+  var chartData = {
+          labels : ["MNR", "Non-suspicious Average", "Suspicious Average", "Overall Average"],
+          datasets : [{
+              label: "Yelp Dataset",
+              fill: true,
+              lineTension: 0.1,
+              backgroundColor: "rgba(75,192,192,0.4)",
+              borderColor: "rgba(75,192,192,1)",
+              borderCapStyle: 'butt',
+              borderDash: [],
+              borderDashOffset: 0.0,
+              borderJoinStyle: 'miter',
+              pointBorderColor: "rgba(75,192,192,1)",
+              pointBackgroundColor: "#fff",
+              pointBorderWidth: 1,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "rgba(75,192,192,1)",
+              pointHoverBorderColor: "rgba(220,220,220,1)",
+              pointHoverBorderWidth: 2,
+              pointRadius: 1,
+              pointHitRadius: 10,
+              
+              spanGaps: false
+    
+          }]
+        }
+  
+        // get chart canvas
+        var ctx = document.getElementById("myChart").getContext("2d");
+  
+        // create the chart using the chart canvas
+        var myChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: chartData,
+          options: {
+                legend: {
+                  display: false
+                }
+              }
+          
+        });
+  
+  </script>
+{% endblock %}

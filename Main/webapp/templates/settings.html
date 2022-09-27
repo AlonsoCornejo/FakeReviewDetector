@@ -1,0 +1,641 @@
+{% from "macro.html" import render_field %}
+
+{% extends "base.html" %}
+
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <title>flask-bootstrap example</title>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.12.0/js/bootstrap-tour.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script> -->
+
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.12.0/css/bootstrap-tour.min.css" rel="stylesheet"> -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/3.0.1/intro.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/3.0.1/introjs.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+
+    <!--a lot of this is for the tour of the reviews-->
+    
+  </head>
+  <body>
+    <div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+
+      <div class="page-header">
+        <h2>Learn About the Features of SpEagle</h2>
+      </div>
+      <div class="col-lg-10">
+        <button type="button" class="btn btn-info" onclick="runTutorial()">Take the Tour!</button>
+        <script>
+          function runTutorial() {
+            introJs().start();
+          }
+        </script>
+      </div>
+      <br>
+      <div class="col-lg-12">
+        <table class="table table-hover" data-step='1' data-intro='This table holds all of the raw data for this specific review&apos;s features'>
+          <thead>
+            <tr class="table-primary">
+              <th scope="col">#</th>
+              <th scope="col">Review Features</th>
+              <th scope="col" data-step='4' data-intro='The raw data values of each feature for this review'>Values</th>
+              <th scope="col">Weight</th>
+              <th scope="col" data-step='5' data-intro='The feature data values normalized by weight so that it can be comparable to other features'>Values * Weight</th>
+              <th scope="col" data-step='6' data-intro='How much each feature contributes to the decision of the model on a single review.'>Contribution</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-step='3' data-intro='Each row represents a different feature that is analyzed by the model. Mouse over 
+            the feature name to better understand its importance'>
+              <th scope="row">1</th>
+              <!-- <td>Rank of the review</td> -->
+              <td><a href="#" style="color:grey;" class="red-tooltip" data-toggle="tooltip" title="A high rank means higher probability towards genuine review, a low rank means higher probability towards spam review">Rank of the review</a></td>
+              <style>
+                .bs-tooltip-auto[x-placement^=top] .arrow::before,
+                .bs-tooltip-top .arrow::before {
+                  border-top-color: green;
+                  /* Red */
+                }
+                .tooltip.top .tooltip-arrow{ border-top-color: green; } 
+                .tooltip.left .tooltip-arrow{ border-left-color: green; } 
+                .tooltip.bottom .tooltip-arrow{ border-bottom-color: green; } 
+                .tooltip.right .tooltip-arrow{ border-right-color: green; } 
+                .tooltip-inner{ background-color:green; }
+              </style>
+              <td>1</td>
+              <td>0.5</td>
+              <td>0.5</td>
+              <td>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped" style="width:15%">15%</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <!-- <td>Extremity of the rating</td> -->
+              <td><a href="#" style="color:grey;" data-toggle="tooltip" title="Extreme ratings (4-5 stars) indicates possible spam.
+                ">Extremity of the rating</a></td>
+              <td>3.5</td>
+              <td>0.1</td>
+              <td>0.35</td>
+              <td>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped" style="width:15%">15%</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <!-- <td>Written early?</td> -->
+              <td><a href="#" style="color:grey;" data-toggle="tooltip" title="Reviews submitted very early on in a product’s lifetime are more likely to be spam.">Written early?</a></td>
+              <td>-1</td>
+              <td>5</td>
+              <td>-5</td>
+              <td>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped" style="width:5%">5%</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <!-- <td>User’s only rating?</td> -->
+              <td><a href="#" style="color:grey;" data-toggle="tooltip" title="If given review is from user with only one review, it is more likely to be spam.">User’s only rating?</a></td>
+              <td>101</td>
+              <td>70</td>
+              <td>7070</td>
+              <td>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped" style="width:60%">60%</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <!-- <td>Rating deviation from average</td> -->
+              <td><a href="#" style="color:grey;" data-toggle="tooltip" title="Large deviation between given review and other reviews of this product indicates possible spam.">Rating deviation from average</a></td>
+              <td>1</td>
+              <td>100</td>
+              <td>100</td>
+              <td>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped" style="width:25%">25%</div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+      </table><br><br>
+
+      <!-- <div class="col-lg-12">
+        <div class="col-lg-10">
+          <h2>Feature 1: Rank of the Review</h2>
+          <canvas id="horizontalBar1" height=100></canvas><br><br>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="col-lg-10">
+          <h2>Feature 2: Extremity of the Rating</h2>
+          <canvas id="horizontalBar2" height=100></canvas><br><br>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="col-lg-10">
+          <h2>Feature 3: Early Review</h2>
+          <canvas id="horizontalBar3" height=100></canvas><br><br>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="col-lg-10">
+          <h2>Feature 4: User’s only rating</h2>
+          <canvas id="horizontalBar4" height=100></canvas><br><br>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="col-lg-10">
+          <h2>Feature 5: Rating deviation from average</h2>
+          <canvas id="horizontalBar5" height=100></canvas><br><br>
+        </div>
+      </div> -->
+
+
+
+    
+
+      <!-- <div class="myslider">
+        <span class="font-weight-bold indigo-text mr-2 mt-1">0</span>
+        <span class="font-weight-bold indigo-text mr-12">100</span>
+        <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3" disabled>
+      </div> -->
+
+      <!-- <div class="d-flex justify-content-center my-4">
+        <span class="font-weight-bold indigo-text mr-2 mt-1">0</span>
+        <form class="range-field w-25">
+          <input class="border-0" type="range" min="0" max="100" />
+        </form>
+        <span class="font-weight-bold indigo-text ml-2 mt-1">100</span>
+      </div> -->
+
+      <table class="table table-hover" data-step='2' data-intro='This table is very similar to the first, but holds feature data regarding
+      the user who posted this specific review'>
+          <thead>
+            <tr class="table-info">
+              <th scope="col">#</th>
+              <th scope="col">User Features</th>
+              <th scope="col">Description</th>
+              <th scope="col">Values</th>
+              <th scope="col">Weight</th>
+              <th scope="col">Values * Weight</th>
+              <th scope="col">Contribution</th>
+              <th scope="col" data-step='7' data-intro='These charts compare each feature&apos;s value for the current review
+              with the average values of the feature over the genuine reviews, the spam reviews, and the whole dataset'>Visualization</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <!-- <td>Most reviews in a single day</td> -->
+              <td><a href="#" style="color:grey;" data-toggle="tooltip" title="Maximum Number of Reviews written in a day">MNR</a></td>
+              <td>Posting many reviews in a single day indicates abnormal behavior. The more reviews posted in a single day, the more suspicious.</td>
+              <td>10</td>
+              <td>2</td>
+              <td>20</td>
+              <td>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped bg-info" style="width:30%">30%</div>
+                </div>
+              </td>
+              <td><canvas id="myChart1" height=100></canvas></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <!-- <td>Ratio of positive reviews (4-5 star)</td> -->
+              <td><a href="#" style="color:grey;" data-toggle="tooltip" title="Ratio of positive reviews">PR</a></td>
+              <td>Spammers are likely to give high ratings (5 star) to promote products. The higher the percentage of a users total reviews as 5 stars, the more suspicious.</td>
+              <td>3</td>
+              <td>6</td>
+              <td>18</td>
+              <td>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped bg-info" style="width:17%">17%</div>
+                </div>
+              </td>
+              <td><canvas id="myChart2" height=100></canvas></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <!-- <td>Ratio of negative reviews (1-2 star)</td> -->
+              <td><a href="#" style="color:grey;" data-toggle="tooltip" title="Ratio of negative reviews">NR</a></td>
+              <td>Spammers may also give low ratings (1 star) to demote products. The higher the percentage of low ratings compared to the user's average, the more suspicious.</td>
+              <td>15</td>
+              <td>2.5</td>
+              <td>37.5</td>
+              <td>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped bg-info" style="width:25%">25%</div>
+                </div>
+              </td>
+              <td><canvas id="myChart3" height=100></canvas></td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <!-- <td>Standard rating deviation of reviews written to the average</td> -->
+              <td><a href="#" style="color:grey;" data-toggle="tooltip" title="Average Rating Deviation">avgRD</a></td>
+              <td>Spam reviews are usually left to try and alter the opinions of products. This hints that ratings of spammers often deviate from the average ratings given by other reviewers. If the user is consistently leaving reviews that differ greately from the average, higher suspicion is placed on them.</td>
+              <td>15</td>
+              <td>2.5</td>
+              <td>37.5</td>
+              <td>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped bg-info" style="width:25%">25%</div>
+                </div>
+              </td>
+              <td><canvas id="myChart4" height=100></canvas></td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <!-- how mixed are the reviews. all 1 and 5? or are there 2,3,4 mixed in... low entropy is sus-->
+              <td><a href="#" style="color:grey;" data-toggle="tooltip" title="Entropy of Rating Distribution">ERD</a></td>
+              <td>Spammers are most likely to leave the same star rating for each product they review. Thus, if the entropy is low, we put greater suspicion on the user; since they tend to give only one type of rating with not much deviation.</td>
+              <td>50</td>
+              <td>5</td>
+              <td>250</td>
+              <td>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped bg-info" style="width:40%">40%</div>
+                </div>
+              </td>
+              <td><canvas id="myChart5" height=100></canvas></td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <!-- difference in review timings -->
+                <td><a href="#" style="color:grey;" data-toggle="tooltip" title="Entropy of Temporal Gaps">ETG</a></td>
+                <td>Spam reviewers typically leave reviews on a regular basis. Thus, when the time gaps between each review are consistent, we place greater suspicion on the user. This means a lower entropy is more suspicious.</td>
+                <td>10</td>
+                <td>2</td>
+                <td>20</td>
+                <td>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-info" style="width:30%">30%</div>
+                  </div>
+                </td>
+                <td><canvas id="myChart6" height=100></canvas></td>
+              </tr>
+              <tr>
+          </tbody>
+      </table><br><br>
+
+      </div>
+
+      <div class="col-lg-12" data-step='8' data-intro='This radar chart can be used to compare all the (user) features in one chart.
+      The review features are in the separate chart.  TIP: To remove clutter you can hide certain datasets by clicking on the legend.'>
+        <div class="col-lg-10">
+          <canvas id="radarChart" height=100></canvas><br><br>
+        </div>
+      </div> 
+
+    </div>
+    <div data-step='9' data-intro='Use this to look at each of the 20 different reviews'>
+      {{ pagination.links }}
+    </div>
+    </div>
+
+    </div>
+  </div>
+</body>
+</html>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  var userFeature = [[0.995024875621890, 0.08955223880597019, 0.9950248756218906, 0.9950248756218906, 0.004975124378109453, 0.004975124378109453],[0.9950248756218906, 0.08955223880597019, 0.9950248756218906, 0.9502487562189055, 0.04975124378109453, 0.004975124378109453], [0.9950248756218906, 0.08955223880597019, 0.9950248756218906, 0.9203980099502488, 0.07960199004975124, 0.004975124378109453], [0.9950248756218906, 0.9651741293532339, 0.05472636815920395, 0.12935323383084574, 0.8805970149253731, 0.18407960199004975], [0.736318407960199, 0.8109452736318408, 0.22388059701492535, 0.32835820895522383, 0.7064676616915423, 0.9104477611940298], [0.5024875621890548, 0.23383084577114432, 0.791044776119403, 0.8656716417910448, 0.2835820895522388, 0.9552238805970149], [0.5024875621890548, 0.7810945273631841, 0.19402985074626866, 0.1691542288557214, 0.9253731343283582, 0.7810945273631841], [0.9950248756218906, 0.10447761194029848, 0.8258706467661692, 0.7711442786069651, 0.14925373134328357, 0.22885572139303484], [0.5024875621890548, 0.2736318407960199, 0.7711442786069651, 0.8009950248756219, 0.32338308457711445, 0.8009950248756219], [0.736318407960199, 0.7512437810945274, 0.5522388059701493, 0.6218905472636815, 0.582089552238806, 0.3482587064676617], [0.9950248756218906, 0.6119402985074627, 0.4328358208955224, 0.28358208955223885, 0.6666666666666666, 0.1890547263681592], [0.353238308457711, 0.2786069651741293, 0.5970149253731343, 0.5422885572139303, 0.39800995024875624, 0.9850746268656716],[0.3532338308457711, 0.5323383084577115, 0.5024875621890548, 0.5472636815920398, 0.6069651741293532, 0.8059701492537313], [0.3532338308457711, 0.154228855721393, 0.7014925373134329, 0.5323383084577115, 0.24378109452736318, 0.9502487562189055], [0.3532338308457711, 0.1840796019900498, 0.8109452736318408, 0.7960199004975125, 0.263681592039801, 0.44776119402985076],[0.3532338308457711, 0.42288557213930345, 0.43781094527363185, 0.2885572139303483, 0.4079601990049751, 0.945273631840796], [0.3532338308457711, 0.5621890547263682, 0.48756218905472637, 0.5373134328358209, 0.6169154228855721, 0.47761194029850745], [0.12437810945273631, 0.592039800995025, 0.4029850746268657, 0.3084577114427861, 0.736318407960199, 0.5671641791044776], [0.06467661691542292, 0.4577114427860697, 0.5174129353233831, 0.6567164179104478, 0.5472636815920398, 0.3333333333333333], [0.736318407960199, 0.29850746268656714, 0.263681592039801, 0.39303482587064675, 0.31343283582089554, 0.3383084577114428]];
+  var chartData1 = {
+          labels : ["MNR", "Non-suspicious Average", "Suspicious Average", "Overall Average"],
+          datasets : [{
+              label: "Yelp Dataset",
+              fill: true,
+              lineTension: 0.1,
+              backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9"],
+              borderColor: "rgba(75,192,192,1)",
+              borderCapStyle: 'butt',
+              borderDash: [],
+              borderDashOffset: 0.0,
+              borderJoinStyle: 'miter',
+              pointBorderColor: "rgba(75,192,192,1)",
+              pointBackgroundColor: "#fff",
+              pointBorderWidth: 1,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "rgba(75,192,192,1)",
+              pointHoverBorderColor: "rgba(220,220,220,1)",
+              pointHoverBorderWidth: 2,
+              pointRadius: 1,
+              pointHitRadius: 10,
+              data : [{{users[page][0]}}, {{avg_prod[0][0]}}, {{avg_prod[0][1]}}, {{avg_prod[0][2]}}],
+              spanGaps: false
+    
+          }]
+        }
+  
+        // get chart canvas
+        var ctx1 = document.getElementById("myChart1").getContext("2d");
+  
+        // create the chart using the chart canvas
+        var myChart1 = new Chart(ctx1, {
+          type: 'horizontalBar',
+          data: chartData1,
+          options: {
+                legend: {
+                  display: false
+                }
+              }
+          
+        });
+
+        var chartData2 = {
+          labels : ["PR", "Non-suspicious Average", "Suspicious Average", "Overall Average"],
+          datasets : [{
+              label: "Yelp Dataset",
+              fill: true,
+              lineTension: 0.1,
+              backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9"],
+              borderColor: "rgba(75,192,192,1)",
+              borderCapStyle: 'butt',
+              borderDash: [],
+              borderDashOffset: 0.0,
+              borderJoinStyle: 'miter',
+              pointBorderColor: "rgba(75,192,192,1)",
+              pointBackgroundColor: "#fff",
+              pointBorderWidth: 1,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "rgba(75,192,192,1)",
+              pointHoverBorderColor: "rgba(220,220,220,1)",
+              pointHoverBorderWidth: 2,
+              pointRadius: 1,
+              pointHitRadius: 10,
+              data : [{{users[page][1]}}, {{avg_prod[1][0]}}, {{avg_prod[1][1]}}, {{avg_prod[1][2]}}],
+              spanGaps: false
+    
+          }]
+        }
+
+        var ctx2 = document.getElementById("myChart2").getContext("2d");
+  
+        // create the chart using the chart canvas
+        var myChart2 = new Chart(ctx2, {
+          type: 'horizontalBar',
+          data: chartData2,
+          options: {
+                legend: {
+                  display: false
+                }
+              }
+          
+        });
+
+        var chartData3 = {
+          labels : ["NR", "Non-suspicious Average", "Suspicious Average", "Overall Average"],
+          datasets : [{
+              label: "Yelp Dataset",
+              fill: true,
+              lineTension: 0.1,
+              backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9"],
+              borderColor: "rgba(75,192,192,1)",
+              borderCapStyle: 'butt',
+              borderDash: [],
+              borderDashOffset: 0.0,
+              borderJoinStyle: 'miter',
+              pointBorderColor: "rgba(75,192,192,1)",
+              pointBackgroundColor: "#fff",
+              pointBorderWidth: 1,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "rgba(75,192,192,1)",
+              pointHoverBorderColor: "rgba(220,220,220,1)",
+              pointHoverBorderWidth: 2,
+              pointRadius: 1,
+              pointHitRadius: 10,
+              data : [{{users[page][2]}}, {{avg_prod[2][0]}}, {{avg_prod[2][1]}}, {{avg_prod[2][2]}}],
+              spanGaps: false
+    
+          }]
+        }
+
+        var ctx3 = document.getElementById("myChart3").getContext("2d");
+  
+        // create the chart using the chart canvas
+        var myChart3 = new Chart(ctx3, {
+          type: 'horizontalBar',
+          data: chartData3,
+          options: {
+                legend: {
+                  display: false
+                }
+              }
+          
+        });
+
+        var chartData4 = {
+          labels : ["avgRD", "Non-suspicious Average", "Suspicious Average", "Overall Average"],
+          datasets : [{
+              label: "Yelp Dataset",
+              fill: true,
+              lineTension: 0.1,
+              backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9"],
+              borderColor: "rgba(75,192,192,1)",
+              borderCapStyle: 'butt',
+              borderDash: [],
+              borderDashOffset: 0.0,
+              borderJoinStyle: 'miter',
+              pointBorderColor: "rgba(75,192,192,1)",
+              pointBackgroundColor: "#fff",
+              pointBorderWidth: 1,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "rgba(75,192,192,1)",
+              pointHoverBorderColor: "rgba(220,220,220,1)",
+              pointHoverBorderWidth: 2,
+              pointRadius: 1,
+              pointHitRadius: 10,
+              data : [{{users[page][3]}}, {{avg_prod[3][0]}}, {{avg_prod[3][1]}}, {{avg_prod[3][2]}}],
+              spanGaps: false
+    
+          }]
+        }
+
+        var ctx4 = document.getElementById("myChart4").getContext("2d");
+  
+        // create the chart using the chart canvas
+        var myChart4 = new Chart(ctx4, {
+          type: 'horizontalBar',
+          data: chartData4,
+          options: {
+                legend: {
+                  display: false
+                }
+              }
+          
+        });
+
+        var chartData5 = {
+          labels : ["ERD", "Non-suspicious Average", "Suspicious Average", "Overall Average"],
+          datasets : [{
+              label: "Yelp Dataset",
+              fill: true,
+              lineTension: 0.1,
+              backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9"],
+              borderColor: "rgba(75,192,192,1)",
+              borderCapStyle: 'butt',
+              borderDash: [],
+              borderDashOffset: 0.0,
+              borderJoinStyle: 'miter',
+              pointBorderColor: "rgba(75,192,192,1)",
+              pointBackgroundColor: "#fff",
+              pointBorderWidth: 1,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "rgba(75,192,192,1)",
+              pointHoverBorderColor: "rgba(220,220,220,1)",
+              pointHoverBorderWidth: 2,
+              pointRadius: 1,
+              pointHitRadius: 10,
+              data : [{{users[page][4]}}, {{avg_prod[4][0]}}, {{avg_prod[4][1]}}, {{avg_prod[4][2]}}],
+              spanGaps: false
+    
+          }]
+        }
+
+        var ctx5 = document.getElementById("myChart5").getContext("2d");
+  
+        // create the chart using the chart canvas
+        var myChart5 = new Chart(ctx5, {
+          type: 'horizontalBar',
+          data: chartData5,
+          options: {
+                legend: {
+                  display: false
+                }
+              }
+          
+        });
+
+        var chartData6 = {
+          labels : ["ETG", "Non-suspicious Average", "Suspicious Average", "Overall Average"],
+          datasets : [{
+              label: "Yelp Dataset",
+              fill: true,
+              lineTension: 0.1,
+              backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9"],
+              borderColor: "rgba(75,192,192,1)",
+              borderCapStyle: 'butt',
+              borderDash: [],
+              borderDashOffset: 0.0,
+              borderJoinStyle: 'miter',
+              pointBorderColor: "rgba(75,192,192,1)",
+              pointBackgroundColor: "#fff",
+              pointBorderWidth: 1,
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "rgba(75,192,192,1)",
+              pointHoverBorderColor: "rgba(220,220,220,1)",
+              pointHoverBorderWidth: 2,
+              pointRadius: 1,
+              pointHitRadius: 10,
+              data : [{{users[page][5]}}, {{avg_prod[5][0]}}, {{avg_prod[5][1]}}, {{avg_prod[5][2]}}],
+              spanGaps: false
+    
+          }]
+        }
+
+        var ctx6 = document.getElementById("myChart6").getContext("2d");
+  
+        // create the chart using the chart canvas
+        var myChart6 = new Chart(ctx6, {
+          type: 'horizontalBar',
+          data: chartData6,
+          options: {
+                legend: {
+                  display: false
+                }
+              }
+          
+        });
+
+        var ctxR = document.getElementById("radarChart").getContext('2d');
+var goodAvg = [0.9395447007387306, 0.2982059399969847, 0.8386853610734207, 0.7526006331976481, 0.1484999246193276, 0.09844715814865074];
+var susAvg = [0.5286365790097131, 0.5426735370765223, 0.4411573086946222, 0.44853115375503433, 0.5706289978678039, 0.570540156361052];
+var avg = [0.5960991064577608, 0.5025370659142101, 0.5064231083389026, 0.4984530085888963, 0.5013242246479048, 0.49303235068438905];
+var myRadarChart = new Chart(ctxR, {
+
+type: 'radar',
+  data: {
+  labels: ["MNR", "PR", "NR", "avgRD", "ERD", "ETG"],
+    datasets: [
+        {
+    label: "User",
+    data: {{users[page]}},
+    backgroundColor: [
+      'rgba(0, 0, 0, 0)',
+    ],
+    borderColor: [
+      'rgba(28,112,213,0.7)',
+    ],
+    borderWidth: 2
+  },{
+    label: "Non-Suspicious",
+    data: goodAvg,
+    backgroundColor: [
+      'rgba(0, 0, 0, 0)',
+    ],
+    borderColor: [
+      'rgba(0, 213, 132, .7)',
+    ],
+    borderWidth: 2
+  },
+  {
+    label: "Suspicious",
+    data: susAvg,
+    backgroundColor: [
+      'rgba(0, 0, 0, 0)',
+    ],
+    borderColor: [
+      'rgba(200, 99, 132, .7)',
+    ],
+    borderWidth: 2
+  },
+  {
+    label: "Average",
+    data: avg,
+    backgroundColor: [
+      'rgba(0, 0, 0, 0)',
+    ],
+    borderColor: [
+      'rgba(0, 0, 0, .7)',
+    ],
+    borderWidth: 2
+  }
+  ]
+},
+options: {
+  responsive: true,
+  scale: {
+            ticks: {
+                suggestedMin: 0,
+                suggestedMax: 1
+            }
+        }
+}
+});
+  
+  </script>
+{% endblock %}

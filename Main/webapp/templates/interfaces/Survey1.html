@@ -1,0 +1,132 @@
+{% from "macro.html" import render_field %}
+<!--the big survey users take before entering site-->
+{% extends "base.html" %}
+
+{% block content%}
+
+<div class="row">
+  <div class="col-lg-12">
+
+    <div class="page-header">
+        <h5 style="color:rgb(100, 158, 141)">Thank you for agreeing to review our AI Spam Spotting Survey!<br><br>
+
+        We are planning to conduct a survey to measure future participants’ attitudes towards AI and their experiences with online reviews. You are asked to take the pilot survey to provide feedback for us to improve survey questions. We ask that you pay attention to the wording and content to ensure that we are asking appropriate questions. There is no right or wrong response. We estimate that participants will complete the survey in about 5 minutes. 
+        </h5><hr><br><br>
+        <!-- <h2>Please answer the following questions:</h2><br> -->
+
+    </div>
+
+    <div class="col-lg-12">
+      <form method="POST" action="." class="form form-horizontal">
+        {{ form.csrf_token }}
+
+        <legend><b>1.</b>&ensp;Have you interacted with AI in the past year?
+          <br><h5 style="color:#78C2AD"></h5></legend>
+        <ul>
+          {{ render_field(form.ai_used) }}
+        </ul><br>
+
+        <legend><b>2.</b>&ensp;How confident are you that technologies you have used use AI?
+          <br><h5 style="color:#78C2AD">[ Choose a value between 0 - 10 ]</h5>
+        </legend>
+        <ul><style>
+          .slider {
+            -webkit-appearance: none;
+            width: 75%;
+            height: 20px;
+            background: #d3d3d3;
+            opacity: 0.8;
+          }
+          .slider::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              appearance: none;
+              width: 25px;
+              height: 25px;
+              background: #0000FF;
+              cursor: pointer;
+          }
+          </style>
+          <div class="myslider" id="myslider">
+            <!-- <span class="font-weight-bold indigo-text float-left">0</span> -->
+             <!-- <span class="font-weight-bold indigo-text" style="text-align:center;display:block">5</span> -->
+             <!-- <span class="font-weight-bold indigo-text float-right">10</span> -->
+            <input type="range" min="0" max="10" value="5" class="slider" id="myRange">
+            <p>Value: <span id="demo"></span></p>
+          </div>
+        </ul><br>
+
+        <legend><b>3.</b>&ensp;How comfortable are you with AI-supported technology?</legend>
+        <ul>
+          {{ render_field(form.used_radio) }}
+        </ul><br>
+
+        <legend><b>4.</b>&ensp;How much do you agree that AI-supported technologies are being developed with your best interest in mind?</legend>
+        <ul>
+          {{ render_field(form.agree_radio) }}
+        </ul><br>
+
+        <legend><b>5.</b>&ensp;How much do you agree that we should support AI development?</legend>
+        <ul>
+          {{ render_field(form.agree_radio2) }}
+        </ul><br>
+
+        <legend><b>6.</b>&ensp;How likely are you to use AI if it helped you in your daily life (for example, saving your time or money)?</legend>
+        <ul>
+          {{ render_field(form.likely_radio) }}
+        </ul><br>
+
+        <legend><b>7.</b>&ensp;Which of the following statement best applies to you?
+          <br><h5 style="color:#78C2AD"></h5></legend>
+        </legend>
+        <ul>
+          {{ render_field(form.tech_radio) }}
+        </ul><br>
+
+        <legend><b>8.</b>&ensp;How often do you purchase products online?</legend>
+        <ul>
+          {{ render_field(form.often_radio) }}
+        </ul><br>
+        
+        <legend><b>9.</b>&ensp;How often do you take product reviews into consideration when purchasing online?</legend>
+        <ul>
+          {{ render_field(form.often_radio2) }}
+        </ul><br>
+
+        <legend><b>10.</b>&ensp;How confident are you that product reviews (say, on Amazon) are written by actual buyers of the product?</legend>
+        <ul>
+          {{ render_field(form.confident_radio) }}
+        </ul><br>
+
+        <legend><b>11.</b>&ensp;How confident are you that you can identify fake product reviews?</legend>
+        <ul>
+          {{ render_field(form.confident_radio2) }}
+        </ul><br>
+
+        <div class="control-group">
+          <label class="control-label"></label>
+            <div class="controls">
+              <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div><br><br><br>
+
+      </form>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  var slider = document.getElementById("myRange");
+  var output = document.getElementById("demo");
+  output.innerHTML = slider.value; // Display the default slider value
+
+  // Update the current slider value (each time you drag the slider handle)
+  slider.oninput = function() {
+    output.innerHTML = this.value;
+  }
+  
+</script>
+{% endblock %}

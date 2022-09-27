@@ -1,0 +1,133 @@
+{% from "macro.html" import render_field %}
+<!--testing user after they've learned, need to better implement this-->
+{% extends "base.html" %}
+
+{% block content%}
+
+  <div class="row">
+    <div class="col-lg-12">
+
+      <div class="page-header">
+        <h2>What do you think SpEagle will predict?</h2>
+        <h4>You should use what you learned on the Examples and Training pages to determine if this review is spam.</h4>
+      </div>
+      
+      <br><br><br>
+      <div class="col-lg-10">
+        <table class="table table-hover">
+            <thead>
+              <tr class="table-primary">
+                <th scope="col">#</th>
+                <th scope="col">Review Features</th>
+                <th scope="col">Values</th>
+                <th scope="col">Weights</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td><a data-toggle="tooltip" title="A high rank means higher probability towards genuine review, a low rank means higher probability towards spam review">Rank of the review</a></td>
+                <td>2</td>     <!--figure out what these +1s are and if there should be other values , were they placeholders?-->
+                <td>.5</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td><a data-toggle="tooltip" title="Extreme ratings (4-5 stars) indicates possible spam.">Extremity of the rating</a></td>
+                <td>1</td>
+                <td>.1</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td><a data-toggle="tooltip" title="Reviews submitted very early on in a product’s lifetime are more likely to be spam.">Written early?</a></td>
+                <td>1</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td><a data-toggle="tooltip" title="If given review is from user with only one review, it is more likely to be spam.">User’s only rating?</a></td>
+                <td>0</td>
+                <td>70</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td><a data-toggle="tooltip" title="Large deviation between given review and other reviews of this product indicates possible spam.">Rating deviation from average</a></td>
+                <td>1</td>
+                <td>100</td>
+              </tr>
+            </tbody>
+        </table><br><br>
+
+        <table class="table table-hover">
+            <thead>
+              <tr class="table-info">
+                <th scope="col">#</th>
+                <th scope="col">Author Features</th>
+                <th scope="col">Values</th>
+                <th scope="col">Weights</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td><a data-toggle="tooltip" title="High number of reviews in a day indicates possible spammer.">Most reviews in a single day</a></td>
+                <td>3</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td><a data-toggle="tooltip" title="Highly skewed ratio of 4-5 star reviews indicates possible spammer.">Ratio of positive reviews (4-5 star)</a></td>
+                <td>13</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td><a data-toggle="tooltip" title="Highly skewed ratio of 1-2 star reviews also indicates possible spammer.">Ratio of negative reviews (1-2 star)</a></td>
+                <td>0</td>
+                <td>2.5</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td><a data-toggle="tooltip" title="Large deviation between given review and other reviews from user indicates possible spammer.">Standard rating deviation of reviews written</a></td>
+                <td>14</td>
+                <td>2.5</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td><a data-toggle="tooltip" title="Users active over large amounts of time are less likely to be spammers.">Long time between first and last reviews?</a></td>
+                <td>2.53</td>
+                <td>5</td>
+              </tr>
+            </tbody>
+        </table><br><br>
+
+        <form method="POST" action="." class="form form-horizontal">
+          {{ form.csrf_token }}
+
+          <ul>
+            {{ render_field(form.opinion) }}
+          </ul>
+
+          <legend>How confident are you with your prediction?</legend>
+          <ul>
+            {{ render_field(form.confident) }}
+          </ul>
+
+          <!-- <ul>
+            {{ render_field(form.prediction) }}
+          </ul> -->
+
+
+          <div class="control-group">
+            <label class="control-label"></label>
+              <div class="controls">
+                <button type="submit" id="submit" href="{{ url_for('testingResultCorrect')}}" class="btn btn-primary">Let's see if I was right!</button>
+              </div>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content%}
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="page-header">
+      <h2>NEWPAGE</h2>
+    </div>
+      <p style="padding-left: 15px; padding-bottom: 20px">
+        <form action="/newpage/" method="POST">
+          <input type="int" name="userid" id="userid">
+          <input class="btn btn-primary btn-block" type="submit" value="View User">
+        </form>
+      </p>
+      {% if userinfo %}
+        <h4>User {{userinfo.userid}}</h4>
+        <table>
+          <tr>
+            <th>Review Features</th>
+            <th>User Values</th>
+            <th>Reference Value for Spammer</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>MNR</th>
+            <th>{{userinfo.MNR}}</th>
+            <th>High</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>PR</th>
+            <th>{{userinfo.PR}}</th>
+            <th>High</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>NR</th>
+            <th>{{userinfo.NR}}</th>
+            <th>High</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>avgRD</th>
+            <th>{{userinfo.avgRD}}</th>
+            <th>High</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>ERD</th>
+            <th>{{userinfo.ERD}}</th>
+            <th>Low</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>ETG</th>
+            <th>{{userinfo.ETG}}</th>
+            <th>Low</th>
+            <th></th>
+          </tr>
+        </table>
+        <legend></legend>
+        <h4>This user is most likely Genuine!</h4>
+      {% endif %}
+    </div>
+    
+    <form method="POST" action="." class="form form-horizontal">
+      <legend></legend>
+      </ul>
+      <div class="control-group">
+        <label class="control-label"></label>
+          <div class="controls">
+            <p style="padding-left: 15px; padding-bottom: 20px"> <a class="btn btn-primary btn-block" href="{{ url_for('index')}}" role="button">Return Home</a></p>
+          </div>
+      </div>
+    </form> 
+  </div>
+</div>
+
+{% endblock %}

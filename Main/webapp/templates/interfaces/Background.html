@@ -1,0 +1,50 @@
+{% from "macro.html" import render_field %}
+<!--background page about project, light AI, broad info-->
+{% extends "base.html" %}
+
+{% block content%}
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="page-header">
+      <h2>Building an AI model understandable by humans</h2>
+    </div>
+    <div class="col-lg-10">
+      <img src="{{ url_for('static', filename='img/Lehigh.jpg') }}" width="300" class="rounded float-left" alt="Lehigh">
+    </div>
+    <div class="col-lg-10">
+      <p>
+        <pre>&#9;</pre>Professor Xie and his team of research students are seeking to help you better understand how an AI
+        model is able to predict whether online product reviews are spam or genuine.  In understanding our model, we hope that
+        you can not only have a higher trust in the correctness of its output, but also adapt some of the algorithm's strategies
+        to spot spam reviews on your own.
+      </p>
+      <p>
+        <pre>&#9;</pre>The AI model we use is called SpEagle. It is an AI that has been trained on a Yelp dataset to predict the likelihood that a given review is spam
+        or genuine based on factors, or <i>features</i> as we call them, of both the review itself and the user who left the review.
+        For your participation in this survey, you will be asked to decide the relative importance of these features in determining whether a review
+        is spam or not.
+        <br><br><pre>&#9;</pre>The next page will tell you more about the specific features we are interested in and where we think they
+        should be weighted in terms of relative importance.  It is more than okay if you disagree, you will have the opportunity to express
+        this later.  If you are curious about any specific feature on the next page, you may mouse over it to explain why it is important.
+        <br><br><pre>&#9;</pre>Note that the list of features we examine today is only a small part of all the features included in the model, 
+        but they should be the easiest for the average person to understand, which is our main purpose.
+      </p>
+    </div>
+    <form method="POST" action="." class="form form-horizontal">
+      {{ form.csrf_token }}
+      <legend></legend>
+      <ul>
+        {{ render_field(form.confident) }}
+      </ul>
+      <div class="control-group">
+        <label class="control-label"></label>
+          <div class="controls">
+            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+          </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

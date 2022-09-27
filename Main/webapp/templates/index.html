@@ -1,0 +1,34 @@
+<!--start here when entering site-->
+
+{% extends "base.html" %}
+
+{% block content %}
+
+	<div class="jumbotron">
+		{% if not g.user.s1 %}
+		<h1>Welcome to Human In The Loop Spam Detection</h1>
+        <br>
+		<p>Please complete our surveys and take a look at our research!</p>
+		<p>Our site is meant to teach you about Machine Learning and spam detection, so please explore all of our features!</p>
+		{% else %}
+		<h1>Welcome back.</h1>
+            <p>Thank you for participating.</p>
+		{% endif %}
+	</div>
+
+	<div class="row">
+		{% if not g.user.s1 %}
+		<!--Added button to allow for review viewing or survey taking-->
+		<p style="padding-left: 15px;"><a class="btn btn-primary btn-lg btn-block" href="{{ url_for('paginate')}}" role="button">Start Spam Spotting!</a></p>
+		<p style="padding-left: 15px;"><a class="btn btn-primary btn-lg btn-block" href="{{ url_for('survey_1')}}" role="button">Take the Survey!</a></p>
+	</div>
+		{% elif g.user.s1 %}
+		<!--if the survey is complete, disable the survey button-->
+    	<p style="padding-left: 15px;"><a class="btn btn-primary btn-lg btn-block" href="{{ url_for('paginate')}}" role="button">Continue Spam Spotting</a></p>
+    	<!-- <p style="padding-left: 15px;"><a class="btn btn-primary btn-lg btn-block" disabled href="{{ url_for('survey_1')}}" role="button">Survey Completed</a></p> -->
+	</div>
+			<p>Thank you for completing our Research.</p>
+		{% endif %}
+
+
+{% endblock %}

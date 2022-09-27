@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% from "macro.html" import render_field %}
+
+{% block content%}
+
+<div class="hidden-sm" style="margin:16px;"></div>
+
+<div class="page-header text-center hidden-xs">
+   <h3>Sign-in to Use Spam Spotting</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3" style="float:none;margin:auto;">
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+          <form method="POST" action=".">
+            <fieldset>
+
+            {{ form.csrf_token }}
+            {{ render_field(form.email, class="form-control", placeholder="Your email address") }}
+            {{ render_field(form.password, class="form-control", placeholder="Password") }}
+            <p style="padding-top: 20px">
+            <button type="submit" id="sign_in" class="btn btn-primary btn-block" style="float:right">Log In</button>
+						<a href="/register">Need an Account?</a>
+						<br>
+						<a href="{{ url_for('forgotPassword')}}">Forgot Password?</a>
+            </fieldset>
+
+          </form>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /.row -->
+
+{% endblock %}

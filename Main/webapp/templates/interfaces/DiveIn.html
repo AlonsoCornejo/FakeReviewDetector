@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% from "macro.html" import render_field %}
+
+{% block content%}
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="page-header">
+      <h2>Play Around With SpEagle</h2>
+
+    </div>
+		<div class="col-lg-10">
+			<div class="panel panel-default">
+        <div class="panel-body">
+          <form method="POST" action=".">
+            <fieldset>
+						</p>
+						</div>
+							{% if userinfo %}
+							<p></p>
+								<h4>SpEagle Output for User {{userinfo.userid}}</h4>
+								<br>
+								<table class="table table-hover">
+									<thead class="table-primary">
+										<tr>
+											<th>Feature&emsp;</th>
+											<th>Value&emsp;</th>
+											<th>Baseline&emsp;</th>
+											<th>Importance&emsp;</th>
+										</tr>
+									</thead>
+									<tr>
+										<td>
+											<a href="#" data-toggle="tooltip" title="Rating Deviation">RD</a>
+										</td>
+										<td>{{userinfo.RD}}</td>
+										<td>1</td>
+										<td>How similar this rating is to the product's average</td>
+									</tr>
+									<tr>
+										<td>
+											<a href="#" data-toggle="tooltip" title="Extremity">EXT</a>
+										</td>
+										<td>{{userinfo.EXT}}</td>
+										<td>0</td>
+										<td>Assigns weight to extreme ratings, 1 for rating of 1 or 5 and 0 for 2, 3, and 4</td>
+									</tr>
+									<tr>
+										<td>
+											<a href="#" data-toggle="tooltip" title="Threshold Deviation">DEV</a>
+										</td>
+										<td>{{userinfo.DEV}}</td>
+										<td>0</td>
+										<td>Formula using recursive minimal entropy partitioning</td>
+									</tr>
+									<tr>
+										<td>
+											<a href="#" data-toggle="tooltip" title="Early Time Frame">ETF</a>
+										</td>
+										<td>{{userinfo.ETF}}</td>
+										<td>0</td>
+										<td>Spammers often review early to increase impact</td>
+									</tr>
+									<tr>
+										<td>
+											<a href="#" data-toggle="tooltip" title="Is Singleton Review?">ISR</a>
+										</td>
+										<td>{{userinfo.ISR}}</td>
+										<td>0</td>
+										<td>Spammers create accounts just to use once, weight of 1 if this is the users only review</td>
+									</tr>
+								</table>
+								<br><br>
+								<h9>We can see an example of some of the features that play into the spam classification process for a particular review. We can observe plenty of attributes about a user and the review in which they leave in an attempt to determine whether or not spam is on the table.</h9>
+
+								<legend></legend>
+							{% endif %}
+						</div>
+            </fieldset>
+          </form>
+      </div>
+   <form method="POST" action="." class="form form-horizontal">
+      <legend></legend>
+      </ul>
+      <div class="control-group">
+        <label class="control-label"></label>
+          <div class="controls">
+            <p style="padding-bottom: 20px"> 
+						<a class="btn btn-primary btn-block" style="margin-right:10px;" href="{{ url_for('sandbox')}}" role="button">Enter New Product ID</a>
+						<a class="btn btn-primary btn-block" href="{{ url_for('index')}}" role="button">Return Home</a>
+					</p>
+          </div>
+      </div>
+    </form> 
+  </div>
+</div>
+
+{% endblock %}

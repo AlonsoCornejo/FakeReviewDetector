@@ -1,0 +1,13 @@
+.navbar-nav .nav-link {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  list-style: none !important;
+  list-style-type: none !important;
+}

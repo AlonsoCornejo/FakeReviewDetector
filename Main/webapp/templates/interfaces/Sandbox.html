@@ -1,0 +1,133 @@
+<!--created research page to be used for research once finished-->
+{% extends "base.html" %}
+{% from "macro.html" import render_field %}
+
+{% block content%}
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="page-header">
+      <h2>Play Around With SpEagle</h2>
+    </div>
+		<div class="sub-header">
+      <h5><br>This page allows you to dive into our ML model by examining the features that play into SpEagle's decision.
+		   You'll be able to observe and predict which features may be affecting the model the most for a wide variety of users and products.
+		   <br><br>To continue the hunt for spam, input a product ID from 0 - 200.
+		   <br><br> 'Run SpEagle' will show the results of SpEagle for your given product
+		   <br> 'View All Reviews' shows all reviews submitted for the given product. <br><br>
+		</h5>
+    </div>
+    <div class="col-lg-10">
+			<div class="panel panel-default">
+        <div class="panel-body">
+          <form method="POST" action=".">
+            <fieldset>
+						{{ form.csrf_token }}
+						{{ render_field(form.pid)}}
+						<p></p>
+						<input class="btn btn-primary btn-block" type="submit" name="submit_button" value="Run SpEagle">
+						<input class="btn btn-primary btn-block" type="submit" name="submit_button" value="View All Reviews">
+						{% if userinfo %}
+						<p></p>
+						<br>
+						<br>
+							<h4>SpEagle Output for Product {{userinfo.userid}}</h4>
+							<br>
+							<table class="table table-hover">
+								<thead>
+									<tr class="table-primary">
+										<th>Feature&emsp;</th>
+										<th>Value&emsp;</th>
+										<th>Baseline&emsp;</th>
+										<th>Importance&emsp;</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<a href="#" data-toggle="tooltip" title="Maximum Number of Reviews in a day">MNR</a>
+										</td>
+										<td>{{userinfo.MNR}}</td>
+										<td>0.596</td>
+										<td>Multiple reviews in a short time-span in suspicious</td>
+										<th></th>
+									</tr>
+									<tr>
+										<td>
+											<a href="#" data-toggle="tooltip" title="Ratio of Positive Reviews">PR</a>
+										</td>
+										<td>{{userinfo.PR}}</td>
+										<td>0.503</td>
+										<td>Spammers sometimes only give high ratings to boost a product</td>
+										<th></th>
+									</tr>
+									<tr>
+										<td>
+											<a href="#" data-toggle="tooltip" title="Ratio of Negative Reviews">NR</a>
+										</td>
+										<td>{{userinfo.NR}}</td>
+										<td>0.506</td>
+										<td>Spammers sometimes only give low ratings to tank a product</td>
+										<th></th>
+									</tr>
+									<tr>
+										<td>
+											<a href="#" data-toggle="tooltip" title="Average Rating Deviation">avgRD</a>
+										</td>
+										<td>{{userinfo.avgRD}}</td>
+										<td>0.498</td>
+										<td>Ratings far from the average can be suspicious</td>
+										<th></th>
+									</tr>
+									<tr>
+										<td>
+											<a href="#" data-toggle="tooltip" title="Entropy of Rating Distribution">ERD</a>
+										</td>
+										<td>{{userinfo.ERD}}</td>
+										<td>0.501</td>
+										<td>Low entropy is suspicious due to lack of expected variation</td>
+										<th></th>
+									</tr>
+									<tr>
+										<td>
+											<a href="#" data-toggle="tooltip" title="Entropy of Temporal Gaps">ETG</a>
+										</td>
+										<td>{{userinfo.ETG}}</td>
+										<td>0.493</td>
+										<td>Low entropy is suspicious as spammers leave reviews regularly</td>
+										<th></th>
+									</tr>
+								</tbody>
+							</table>
+							<br><br>
+							<h9>There is so much to learn from these variables and countless others as we continue our spam spotting safari. It's important to remember that a user can have suspicious ratings in some or even all of these categories without being a spammer. That being said, with each additional suspicious rating, the likelihood of the user being a spammer grows. While SpEagle is a high-performing model, it will always be up to you to interept her results.</h9>
+							<br><br>
+							<legend></legend>
+						{% endif %}
+					</div>
+							<!-- <p style="padding-top: 20px">
+								<a class="btn btn-primary btn-block" style="margin-right:30px;" href="{{ url_for('run_speagle_high', pData=34) }}" role="button">Sort Highest</a>
+								<a class="btn btn-primary btn-block" style="margin-right:30px;" href="{{ url_for('run_speagle_low', pData=34) }}" role="button">Sort Lowest</a> 
+								<a class="btn btn-primary btn-block" style="margin-right:30px;" href="{{ url_for('run_speagle', pData=0) }}" role="button" name="sort" value="sort">Start Hunting</a>
+							</p> -->
+						</fieldset>
+          </form>
+      </div>
+    
+    
+   <!-- <form method="POST" action="." class="form form-horizontal">
+      {{ form.csrf_token }}
+      <legend></legend>
+      </ul>
+      <div class="control-group">
+        <label class="control-label"></label>
+          <div class="controls">
+            <p style="padding-bottom: 20px"> <a class="btn btn-primary btn-block" href="{{ url_for('index')}}" role="button">Return Home</a></p>
+          </div>
+      </div>
+    </form>  -->
+  </div>
+</div>
+
+{% endblock %}
