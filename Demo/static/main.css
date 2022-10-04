@@ -7,6 +7,22 @@ body{
     overflow: hidden;
 }
 
-p{
-    font-size: larger;
+.navbar{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 2000px;
+    background-color: rgb(23, 57, 160);  
 }
+
+.input_form{
+    position: absolute;
+    top: 20%;
+    bottom: 10%;
+    left: 5%;
+    width: 1400px;
+    background-color: rgb(43, 226, 113);
+    border-radius: 10px;
+}
+
+

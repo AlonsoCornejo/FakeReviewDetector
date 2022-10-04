@@ -1,5 +1,8 @@
+#from itertools import product
+#from Demo.scrapping import Scrapping
 from flask import Flask, redirect, url_for, render_template,request
 from werkzeug.utils import redirect
+import scrapping
 
 app= Flask(__name__)
 
@@ -9,7 +12,10 @@ def Home():
 
 @app.route("/Success/<input>")
 def Updated(input):
-    return 'You inserted: %s' % input
+    test=scrapping.Scrapping()
+    test_t=test.getName()
+    user=str(test_t)
+    return render_template("display.html",product_name=input,person=user)
 
 @app.route('/get_Input',methods=['POST','GET'])
 def get_Input():
