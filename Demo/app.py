@@ -9,8 +9,12 @@ app= Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
 
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+class product(db.Model):
+    id = db.Column(db.Integer, primary_key=True)                                #primary key that identifies the product
+    image_file = db.Column(db.Text, nullable = True, default='default.jpg')     #store the string path to image of product to use in html later, can be empty, needs to be hashed?
+    descript = db.Column(db.Text, nullable = True)                              #store the product description, can be empty
+    product_url = db.Column(db.Text, unique = True, nullable = False)           #store the product url, cannot be empty since we need a url to the product
+    
     
 
 @app.route("/")
