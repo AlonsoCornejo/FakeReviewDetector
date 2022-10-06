@@ -7,6 +7,9 @@ import scrapping
 
 app= Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+
+db = SQLAlchemy(app)
+
 @app.route("/")
 def Home():
     return render_template("main.html")
