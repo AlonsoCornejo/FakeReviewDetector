@@ -12,10 +12,13 @@ def Home():
 
 @app.route("/Success/<input>")
 def Updated(input):
-    test=scrapping.Scrapping()
-    test_t=test.getName()
-    user=str(test_t)
-    return render_template("display.html",product_name=input,person=user)
+    test=scrapping.Scrapping(input)
+    product=test.getProduct()
+    price=test.getPrice()
+    review=test.getReview()
+
+    return render_template("display.html",link_product=input,product=product
+    ,price=price,review=review)
 
 @app.route('/get_Input',methods=['POST','GET'])
 def get_Input():
