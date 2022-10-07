@@ -19,9 +19,19 @@ class Scrapping:
 
 
     #Extract Title Product
-    def extract_name(self):
-        page = requests.get("https://dataquestio.github.io/web-scraping-pages/simple.html")
+    def scrap(self):
+        page = requests.get(self.getLink())
         page.content
+
+    #Setters
+    def setProduct(self,name):
+        self.product=name
+
+    def setPrice(self,amount):
+        self.price=amount
+    
+    def setReview(self,text):
+        self.review=text
 
     #Test
     def getProduct(self):
