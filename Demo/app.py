@@ -1,5 +1,6 @@
 #from itertools import product
 #from Demo.scrapping import Scrapping
+from pydoc import describe
 from flask import Flask, redirect, url_for, render_template,request
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import ForeignKey
@@ -41,12 +42,16 @@ def Home():
 @app.route("/Success/<input>")
 def Updated(input):
     test=scrapping.Scrapping(input)
+    test.setLink("https://www.newegg.ca/gigabyte-geforce-rtx-3080-ti-gv-n308tgaming-oc-12gd/p/N82E16814932436?Description=3080&cm_re=3080-_-14-932-436-_-Product")
+    test.scrap(test.getLink())
     product=test.getProduct()
     price=test.getPrice()
     review=test.getReview()
+    hyper=test.getLink()
+    desc=test.getDescription()
 
-    return render_template("display.html",link_product=input,product=product
-    ,price=price,review=review)
+    return render_template("display.html",link_product=hyper,product=product
+    ,price=price,review=review,description=desc)
 
 @app.route('/get_Input',methods=['POST','GET'])
 def get_Input():

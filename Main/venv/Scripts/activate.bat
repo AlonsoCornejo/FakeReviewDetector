@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\Alonso Cornejo\Documents\Lehigh University\Third Year\Spring Semester\CSB312\Project\spamspottingweb\venv
+set VIRTUAL_ENV=C:\Users\Alonso Cornejo\Documents\Lehigh University\Fourth Year\Fall Semester\CSB313\Capstone\FakeReviewDetector\Main\venv
 
 if not defined PROMPT set PROMPT=$P$G
 
