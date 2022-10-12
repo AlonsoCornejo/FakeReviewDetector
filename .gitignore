@@ -2,3 +2,7 @@
 comparative/toImport.txt
 comparative/Results.txt
 comparative/__pycache__
+Main/venv/bin
+Main/venv/Lib
+Main/venv/pyvenv.cfg
+Main/webapp/__pycache__/*
