@@ -18,7 +18,44 @@ class Scrapping:
         self.price=0
         self.review=[]
         
-    #Extract Title Product
+    #Setters
+    def setLink(self,link):
+        self.product_link=link
+
+    def setProduct(self,name):
+        self.product=name
+    
+    def setDescription(self,description):
+        self.description=description
+
+    def setPrice(self,amount):
+        self.price=amount
+    
+    def setReview(self,text):
+        self.review=text
+
+    #Test Getters
+    def getLink(self):
+        hipervinculo=str(self.product_link)
+        return hipervinculo
+
+    def getProduct(self):
+        product=str(self.product)
+        return product
+    
+    def getDescription(self):
+        descripcion=str(self.description)
+        return descripcion
+
+    def getPrice(self):
+        price=str(self.price)
+        return price
+
+    def getReview(self):
+        review=str(self.review)
+        return review
+    
+    #Scrap Information on web
     def scrap(self,url):
         
         #Access webpage html doc
@@ -57,39 +94,24 @@ class Scrapping:
             i=i+3
 
         self.setReview(overall_reviews)
-    #Setters
-    def setLink(self,link):
-        self.product_link=link
 
-    def setProduct(self,name):
-        self.product=name
-    
-    def setDescription(self,description):
-        self.description=description
+    #Get Reviews on Text File
+    def reviews2textFile(self):
+        temp = open("temp.txt", "w")
 
-    def setPrice(self,amount):
-        self.price=amount
-    
-    def setReview(self,text):
-        self.review=text
+        #Add Reviews
+        for i in self.review:
+            temp.write(i+'\n')
 
-    #Test Getters
-    def getLink(self):
-        hipervinculo=str(self.product_link)
-        return hipervinculo
+        temp.close()
 
-    def getProduct(self):
-        product=str(self.product)
-        return product
-    
-    def getDescription(self):
-        descripcion=str(self.description)
-        return descripcion
+        #Erase Blank Lines
+        with open("temp.txt", 'r') as tempo, open('input_reviews.txt', 'w') as reviews:
+            for line in tempo:
+                if line.strip():
+                    reviews.write(line)
 
-    def getPrice(self):
-        price=str(self.price)
-        return price
+        
 
-    def getReview(self):
-        review=str(self.review)
-        return review
+        
+        

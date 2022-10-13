@@ -6,6 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import ForeignKey
 from werkzeug.utils import redirect
 import scrapping
+import comparative
 
 app= Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
@@ -33,14 +34,15 @@ class Review(db.Model):
     
     def __repr__(self):                                                             #dunder method or magic method to represent database when its printed out
         return f"Product('{self.prod_id}','{self.chart1}','{self.alg1}','{self.chart2}','{self.alg2}')"
-
-    
+  
 @app.route("/")
 def Home():
     return render_template("main.html")
 
 @app.route("/Success/<input>")
 def Updated(input):
+
+    #Scrapping Process
     test=scrapping.Scrapping(input)
     test.setLink("https://www.newegg.ca/gigabyte-geforce-rtx-3080-ti-gv-n308tgaming-oc-12gd/p/N82E16814932436?Description=3080&cm_re=3080-_-14-932-436-_-Product")
     test.scrap(test.getLink())
@@ -49,7 +51,16 @@ def Updated(input):
     review=test.getReview()
     hyper=test.getLink()
     desc=test.getDescription()
+    test.reviews2textFile()
 
+    #Comparative Analysis
+    analysis=comparative.Comparative('input_reviews.txt','./input_reviews.txt')
+    analysis.get_summary()
+    analysis.mFileClose()
+    analysis.extractDF()
+    analysis.emotionAnalysis()
+    
+    
     return render_template("display.html",link_product=hyper,product=product
     ,price=price,review=review,description=desc)
 

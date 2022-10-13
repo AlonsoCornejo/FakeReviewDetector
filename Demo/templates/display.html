@@ -8,5 +8,41 @@
         <h1> The price you selected is: ${{ price }}</h1>
         <h1> The review you selected is: {{ review }}</h1>
         <h1> The description you selected is: {{ description }}</h1>
+        <h1>These are the table results:</h1>
+
+        <div class='sub_nav'>
+            <a href='#' onclick='loadHtml("template","table.html")'>Comparative Analysis Result</a>
+            <a href='#' onclick='loadHtml("template","emotiont.html")'>Emotion Analysis Result</a>
+        </div>
+
+        <div id='template' class='template'>
+            Template will go here
+        </div>
+
     </body>
 </html>
+<script>
+    function loadHtml(id,filename){
+    console.log('div id: ${id}, filename: ${filename}');
+
+    let xhttp;
+    let element=document.getElementById(id);
+    let file=filename;
+
+    if(file){
+        xhttp=new XMLHttpRequest();
+        xhttp.onreadystatechange=function(){
+            if(this.readyState==4){
+                if(this.status==200){element.innerHTML=this.responseText;}
+                if(this.status==404){element.innerHTML="<h1> Failed</h1>";}
+            }
+        }
+
+        xhttp.open("GET",'templates/${file}',true);
+        xhttp.send();
+        return;
+    }
+    
+}
+</script>
+
