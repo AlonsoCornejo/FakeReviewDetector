@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+    background: linear-gradient(120deg,#2980b9,#8e44ad);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.navbar{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 2000px;
+    background-color: rgb(23, 57, 160);  
+}
+
+.input_form{
+    position: absolute;
+    top: 20%;
+    bottom: 10%;
+    left: 5%;
+    width: 1400px;
+    background-color: rgb(43, 226, 113);
+    border-radius: 10px;
+}
+
+

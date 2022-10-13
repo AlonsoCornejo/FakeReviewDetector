@@ -5,4 +5,4 @@ comparative/__pycache__
 Main/venv/bin
 Main/venv/Lib
 Main/venv/pyvenv.cfg
-Main/webapp/__pycache__/*
+Main/webapp/__pycache__

@@ -23,6 +23,14 @@ import json
 from email.mime.multipart import MIMEMultipart
 from time import sleep
 
+from . import scrapping
+
+from pydoc import describe
+from flask import Flask, redirect, url_for, render_template,request
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import ForeignKey
+from werkzeug.utils import redirect
+
 @app.route('/')
 @app.route('/index')  # home page routing
 def index():
@@ -570,3 +578,31 @@ def paginate():
                            values=values,
                            labels=labels
                            )
+
+# start of new code
+@app.route("/analysis")
+def analysis():
+    return render_template("my_main.html")
+
+@app.route("/Success/<input>")
+def Updated(input):
+    test=scrapping.Scrapping(input)
+    test.setLink("https://www.newegg.ca/gigabyte-geforce-rtx-3080-ti-gv-n308tgaming-oc-12gd/p/N82E16814932436?Description=3080&cm_re=3080-_-14-932-436-_-Product")
+    test.scrap(test.getLink())
+    product=test.getProduct()
+    price=test.getPrice()
+    review=test.getReview()
+    hyper=test.getLink()
+    desc=test.getDescription()
+
+    return render_template("my_display.html",link_product=hyper,product=product
+    ,price=price,review=review,description=desc)
+
+@app.route('/get_Input',methods=['POST','GET'])
+def get_Input():
+    if request.method== 'POST':
+        product=request.form["Product"]
+        return redirect(url_for("Updated",input=product))
+    else:
+        product=request.args.get('Product')
+        return redirect(url_for("Updated",input=product))

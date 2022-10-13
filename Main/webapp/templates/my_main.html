@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Demo</title>
+    </head>
+
+    <body>
+        <div class="navbar">
+            <h1>Spambot Detector</h1>
+        </div>
+
+        <div class="input_form">
+            <form action="/get_Input" name="Product" method="POST">
+                <p>Product:</p>
+                <p><input type="text" name="Product" /></p>
+                <p><input type="submit" value="Submit" /></p>
+            </form>
+        </div>  
+    </body>
+</html>
+
+{% endblock %}
