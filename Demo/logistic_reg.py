@@ -51,7 +51,7 @@ class LogReg:
              'focuspast','focuspresent','focusfuture','netspeak', 'assent', 'nonflu', 'filler']]
         self.y = self.liwc_df['realOrFake']
         
-        self.x_train,self.x_test,self.y_train,self.y_test = train_test_split(x,y,test_size=0.25,random_state=0)
+        self.x_train,self.x_test,self.y_train,self.y_test = train_test_split(self.x,self.y,test_size=0.25,random_state=0)
         
         self.logistic_regression = LogisticRegression(solver="sag", max_iter=2000)
         
@@ -60,4 +60,4 @@ class LogReg:
         self.y_pred = self.logistic_regression.predict(self.x_test)
         self.y_pred_prob = self.logistic_regression.predict_proba(self.x_test)
         
-        self.cv_results = cross_validate(self.logistic_regression, x, y, cv=None)
+        self.cv_results = cross_validate(self.logistic_regression, self.x, self.y, cv=None)
