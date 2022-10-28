@@ -4,8 +4,8 @@
 ### To run it on your local machine: ###
 ```python
 # in the root directory
-python3 -m venv venv
-. venv/bin/activate
+py -m venv venv
+. venv/Scripts/activate
 export FLASK_APP=webapp
 export FLASK_ENV=development
 pip install -r requirements.txt
