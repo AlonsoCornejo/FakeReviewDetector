@@ -7,11 +7,45 @@
         <title>Product Display</title>
     </head>
     <body>
-        <h1> The link you selected is: {{ link_product }}</h1>
+        <!-- <h1> The link you selected is: {{ link_product }}</h1> -->
         <h1> The product you selected is: {{ product }}</h1>
-        <h1> The price you selected is: ${{ price }}</h1>
-        <h1> The review you selected is: {{ review }}</h1>
-        <h1> The description you selected is: {{ description }}</h1>
+        <!-- <h1> The price you selected is: ${{ price }}</h1> -->
+        <!-- <h1> The review you selected is: {{ review }}</h1> -->
+        <!-- <h1> The description you selected is: {{ description }}</h1> -->
+        <div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                const labels = [
+                    'Jan', 'Feb', 'March',
+                ];
+
+                const data = {
+                    labels: labels,
+                    datasets: [{
+                        label: 'My first dataset',
+                        backGroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: [0, 10, 5, 15],
+                    }]
+                };
+
+                const config = {
+                    type: 'line',
+                    data: data,
+                    options: {},
+                };
+
+            </script>
+            <div>
+                <canvas id="comparativeChart"></canvas>
+            </div>
+            <script>
+                const comparativeChart = new Chart(
+                    document.getElementById('comparativeChart'),
+                    config,
+                );
+            </script>
+        </div>
     </body>
 </html>
 
