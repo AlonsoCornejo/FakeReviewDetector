@@ -594,6 +594,12 @@ def Updated(input):
     review=test.getReview()
     hyper=test.getLink()
     desc=test.getDescription()
+    
+    #Logistic Regression
+    logreg = logistic_reg.Logistic_reg()
+    
+    #any functions needed here
+    #to_html library
 
     return render_template("my_display.html",link_product=hyper,product=product
     ,price=price,review=review,description=desc)

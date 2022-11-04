@@ -17,7 +17,13 @@ import matplotlib.pyplot as plt
 #import for pandas
 import pandas as pd
 
-class LogReg:
+class Logistic_reg:
+    def __init__(self, name, path):
+        
+        self.filename = name
+        self.mFile=open(path,"r")
+        #DEBUG
+        
     def large_cat_lin_reg(self):
         self.liwc_df = pd.read_csv('LIWC-outputOnContentsAndNY_big_cat.csv')
         
@@ -61,3 +67,5 @@ class LogReg:
         self.y_pred_prob = self.logistic_regression.predict_proba(self.x_test)
         
         self.cv_results = cross_validate(self.logistic_regression, self.x, self.y, cv=None)
+        
+    #make a function that returns the results as a file like in comparative.py getfile
