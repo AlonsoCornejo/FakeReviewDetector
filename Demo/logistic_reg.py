@@ -41,6 +41,15 @@ class Logistic_reg:
         
         self.cv_results = cross_validate(self.logistic_regression, self.x, self.y, cv=None)
     
+        #remove line 33 - dont need to train and test split, we will use entire x and y to train single log reg model
+        #change line 37 needs to consume the entire x and y matrix
+        #our test data is our new review
+        #extract LIWC categories from new reviews
+        #construct x test matrix from new review, fit that into line 40 (self.y_pred_prob = self.logistic_regression.predict_proba(self.x_test))
+        #save result of y pred prob to display on the webpage
+            #maybe have a gradient to show the probability using thresholds. 
+            #between table of reviews and arrows at bottom, show a histogram of frequencies of key words in the reviews. 
+            #place LIWC categories frequencies and send to front end and analyze if they are sentimental, lies, etc. 
     def large_cat_lin_reg(self):
         self.liwc_df = pd.read_csv('LIWC-outputOnContentsAndNY_big_cat.csv')
         
@@ -68,4 +77,9 @@ class Logistic_reg:
         
         self.cv_results = cross_validate(self.logistic_regression, self.x, self.y, cv=None)
         
+        
+        self.y_pred_df = pd.DataFrame(self.y_pred, columns = ['y_pred'], index = X.index.copy())
+        self.y_pred_train_df = pd.DataFrame(self.y_pred_train, columns = ['y_pred_train'], index = X[train].index.copy())
+        self.y_pred_test_df = pd.DataFrame(self.y_pred_test, columns = ['y_pred_test'], index = X[test].index.copy())
+        self.dftraintest = pd.concat([self.y,self.y_pred_df,self.y_pred_train_df,self.y_pred_test_df],axis=1)
     #make a function that returns the results as a file like in comparative.py getfile
